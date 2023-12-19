@@ -1,0 +1,40 @@
+.vacancies-divs {
+    padding: 0 0 110px;
+
+    .accordion {
+        @include fcb;
+        border-radius: 10px;
+        background-color: #f1f1f1;
+        padding: 30px 40px;
+        margin: 0 0 20px;
+
+        &__button {
+            @include width-height(32px, 32px)
+        }
+    }
+
+    &__info {
+        margin: 0 0 25px;
+        p {
+            margin: 0 0 20px;
+        }
+
+        h4 {
+            font-weight: 600;
+
+            &:not(:last-child) {
+                margin: 0 0 10px;
+            }
+        }
+
+        li {
+            list-style: inside;
+            margin: 0 0 10px 10px;
+        }
+    }
+
+    &__button {
+        margin: 0 0 25px;
+        padding: 16px 52px;
+    }
+}

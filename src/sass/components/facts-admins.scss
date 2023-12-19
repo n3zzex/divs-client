@@ -1,0 +1,76 @@
+.facts-admins {
+    position: relative;
+    padding: 0 0 110px;
+    background-color: #f1f1f1;
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: scale-down;
+    }
+
+    &__inner {
+        padding: 80px 0;
+        position: relative;
+        z-index: 5;
+    }
+
+    &__head {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 0 10px;
+        color: #fff;
+        
+        span {
+            color: $color-orange-main;
+        }
+    }
+
+    &__caption {
+        margin: 0 0 40px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-name {
+        font-size: 55px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .admins-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 58px 35px;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                margin: 0 0 14px;
+            }
+        }
+
+        &__title {
+            font-size: $fz-medium-less;
+            font-weight: 600;
+            margin: 0 0 5px;
+        }
+
+        &__rang {
+            font-weight: 300;
+            margin: 0 0 14px;
+        }
+
+        &__button {
+            margin-top: auto;
+        }
+
+    }
+}

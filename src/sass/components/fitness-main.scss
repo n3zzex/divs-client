@@ -1,0 +1,23 @@
+.fitness-main {
+
+    &__description {
+        font-weight: 400
+    }
+    
+    &__question {
+        @include fc_;
+        margin: 20px 0 0;
+        font-size: $fz-medium;
+        font-weight: 700;
+        
+        p {
+            margin: 0 10px 0 0;
+        }
+
+
+        a {
+            color: $color-purple-button;
+            text-decoration: underline;
+        }
+    }
+}

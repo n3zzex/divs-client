@@ -1,0 +1,35 @@
+.gyms-physical {
+    position: relative;
+    padding: 0 0 100px;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        height: 700px;
+    }
+
+    &__content {
+        @include fc_;
+    }
+
+    .head {
+        font-weight: 800;
+        margin: 0 0 25px;
+    }
+
+    &__title {
+        width: 372px;
+        margin: 0 0 20px;
+    }
+
+    .question {
+        margin: 0;
+    }
+}
+
+.description {
+    line-height: 30px;
+    margin: 0 0 30px;
+}

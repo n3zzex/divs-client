@@ -1,0 +1,54 @@
+.map {
+
+    position: relative;
+
+    &__bg {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+
+    .map-block {
+        position: absolute;
+        background-color: #fff;
+        padding: 60px;
+        border-radius: 60px 10px 10px 10px;
+        bottom: -150px;
+        z-index: 5000;
+
+        h1 {
+            font-weight: 700;
+            font-size: 55px;
+            margin: 0 0 30px;
+
+            span {
+                color: $color-orange-main;
+            }
+        }
+
+        .map-list {
+            @include fcc;
+            gap: 80px;
+
+
+            &__item {
+                font-weight: 500;
+                font-size: 20px;
+
+                span {
+                    font-size: $fz-medium-less;
+                    font-weight: 300;
+                }
+            }
+
+            &__mail {
+                width: 330px;
+            }
+
+            &__info {
+                @include fc_;
+                gap: 10px;
+            }
+        }
+    }
+}

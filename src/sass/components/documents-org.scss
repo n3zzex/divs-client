@@ -1,0 +1,54 @@
+.documents-org {
+    padding: 200px 0 55px;
+    position: relative;
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+    }
+
+    .category-list__item:not(:last-child) {
+        margin: 0 20px 0 0;
+    }
+    
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px;
+    }
+
+    &__title {
+        font-weight: 800;
+        margin: 0 0 35px;
+    }
+
+    .documents-org-list {
+
+        &__item {
+            @include fc_;
+            color: $color-black-darken;
+            font-weight: 600;
+
+            img {
+                width: 27px;
+                height: 27px;
+                object-fit: cover;
+                margin: 0 32px 0 0;
+            }
+
+            .documents-org-list__link {
+                font-family: 600;
+                text-decoration: underline;
+                color: $color-purple-button;
+                margin: 0 25px 0 0;
+            }
+        }
+
+        .documents-org-list__item:not(:last-child) {
+            margin: 0 0 20px;
+        }
+    }
+
+
+}

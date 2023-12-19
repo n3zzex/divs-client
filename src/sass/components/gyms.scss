@@ -1,0 +1,53 @@
+.gyms {
+    position: relative;
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        top: -45px;
+        left: 0;
+        object-fit: scale-down;
+    }
+
+
+    &__inner {
+        padding: 90px 0;
+        position: relative;
+        z-index: 5;
+        .gyms__head {
+            font-size: 25px;
+            font-weight: 700;
+            margin: 0 0 10px;
+            color: #fff;
+            
+            span {
+                color: $color-orange-main;
+            }
+        }
+
+
+        .gyms__caption {
+            @include fcb;
+            align-items: flex-end;
+            margin: 0 0 40px;
+
+            .gyms__info {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .gyms-name {
+                font-size: 55px;
+                font-weight: 700;
+                color: #fff;
+            }
+
+            .gyms__button {
+                display: flex;
+                padding: 16px 38px;
+                white-space: nowrap;
+            }
+        }
+    }
+}

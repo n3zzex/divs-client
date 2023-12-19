@@ -1,0 +1,55 @@
+.rooms {
+
+    &__inner {
+        padding: 70px 0 115px;
+
+        .rooms__head {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 0 0 10px;
+            color: #000;
+            
+            span {
+                color: $color-orange-main;
+            }
+        }
+        .rooms__caption {
+            @include fcb;
+            margin: 0 0 35px;
+
+            .rooms-name {
+                font-size: 55px;
+                font-weight: 700;
+                color: $color-black-darken;
+            }
+
+            .rooms__button {
+                display: flex;
+                padding: 16px 38px;
+                white-space: nowrap;
+            }
+        }
+
+        .rooms-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+
+            &__item {
+                display: flex; 
+                flex-direction: column;
+                .rooms-list__image {
+                    margin: 0 0 18px;
+                }
+
+                .rooms-list__title {
+                    margin: 0 0 32px;
+                }
+                
+                .rooms-list__button {
+                    margin-top: auto;
+                }
+            }
+        }
+    }
+}

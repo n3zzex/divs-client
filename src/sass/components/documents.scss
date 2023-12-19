@@ -1,0 +1,56 @@
+.documents {
+
+    &__inner {
+        padding: 200px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__redirect {
+        @include fc_;
+        margin: 0 0 20px;
+
+        .documents__back {
+            color: $color-purple-button;
+            font-weight: 600;
+
+            &::after {
+                content: ">";
+                width: 100%;
+                height: 100%;
+                margin: 0 10px;
+            }
+        }
+
+        .documents__here {
+            color: #fff;
+        }
+    }
+
+    &__title {
+        font-size: $fz-big;
+        font-weight: 700;
+        color: #fff;
+        
+        span {
+            color: $color-orange-main;
+        }
+    }
+
+    .documents-category {
+        @include fc_;
+
+        &__item {
+            padding: 19px 35px;
+            white-space: nowrap;
+            font-size: 17px;
+            color: #fff;
+
+            &:not(:last-child) {
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,109 @@
+.advantage {
+    padding: 200px 0 80px;
+    position: relative;
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+    }
+
+    &__form {
+        width: 100%;
+        @include fc_;
+        position: absolute;
+        top: 40px;
+    }
+
+    &__form {
+        
+        input {
+            width: 275px;
+            border-radius: $br-half-round;
+            padding: 20px 0 20px 30px;
+            font-size: 14px;
+            background-color: #fff;
+            outline: none;
+            margin: 0 16px 0 0;
+        }
+    }
+
+    &__attach {
+        @include fc_;
+        margin: 0 18px 0 0;
+        font-size: 12px;
+        color: #fff;
+
+        img {
+            margin: 0 5px 0 0;
+        }
+    }
+
+    &__button {
+        padding: 18px 46px;
+        font-size: 17px;
+    }
+
+    &__inner {
+        .advantage__head {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 0 0 10px;
+            color: #000;
+            
+            span {
+                color: $color-orange-main;
+            }
+        }
+        .advantage__caption {
+            margin: 0 0 30px;
+
+            .advantage-name {
+                font-size: 55px;
+                font-weight: 700;
+                color: $color-black-darken;
+                margin: 0 0 20px;
+            }
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__list {
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__item {
+        padding: 30px;
+
+    }
+
+    &__content {
+
+        img {
+            width: 41px;
+            height: 41px;
+            margin: 0 0 10px;
+        }
+    }
+
+    &__title {
+        margin: 0 0 5px;
+        white-space: nowrap;
+        font-weight: 600;
+        color: $color-black-darken;
+    }
+
+    &__text {
+        width: 202px;
+    }
+}

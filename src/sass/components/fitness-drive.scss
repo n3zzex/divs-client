@@ -1,0 +1,40 @@
+.fitnes-drive {
+    // padding: 0 0 70px;
+
+    .fitness-drive__inner {
+
+    }
+
+    .fitness-drive__number {
+        font-weight: 800;
+        font-size: 40px;
+        color: $color-orange-main;
+        margin: 0 0 10px;
+    }
+
+    .format-block {
+        @include fc_;
+
+        img {
+            margin: 0 60px 0 0;
+        }
+
+        &__title {
+            margin: 0 0 10px;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 35px;
+        }
+
+        p {
+            margin: 0 0 40px;
+        }
+
+        &__button {
+            padding: 18px 54px;
+            font-size: 20px;
+        }
+    }
+
+
+}

@@ -1,0 +1,74 @@
+.fitness-reviews {
+    padding: 0 0 100px;
+
+    &__head {
+        margin: 0 0 25px;
+    }
+
+    &__title {
+        margin: 0 0 40px;
+    }
+
+    &__slider {
+        position: relative;
+
+    }
+
+    &__prev, &__next {
+        position: absolute;
+        top: 176px;
+    }
+
+    .reviews-item {
+        padding: 50px 60px;
+        
+        border-radius: 60px 10px 10px 10px;
+        background-color: #f1f1f1;
+
+        &__content {
+
+            p {
+                line-height: 28px;
+            }
+        }
+
+
+        &__top {
+            @include fcb;
+
+            margin: 0 0 13px;
+
+            .review-quote {
+                @include width-height(68px, 58px);
+                object-fit: cover;
+            }
+        }
+
+        &__about {
+            display: flex;
+            align-items: center;
+
+            .review-logo {
+                @include width-height(89px, 89px);
+                margin: 0 24px 0 0;
+                object-fit: cover;
+            }
+        }
+
+        &__stars {
+            p {
+                margin: 0 0 10px;
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            img {
+                @include width-height(17px, 16px);
+                &:not(:last-child) {
+                    margin: 0 15px 0 0
+                }
+            }
+        }
+    }
+
+}

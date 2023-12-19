@@ -1,0 +1,51 @@
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+// Colors
+
+$color-white-main: #fff;
+$color-white-darken: #EBEBEB;
+
+$color-black-main: #000;
+$color-black-lighten:#171515;
+$color-black-darken: #130D0E;
+
+$color-grey-main: rgba(126, 136, 152, 1);
+$color-grey-darken: rgba(70, 70, 70, 1);
+
+$color-orange-main: #F37021;
+$color-orange-lighten: #A88771;
+
+$color-purple-button: #E40571;
+
+// Borders
+
+$br-small: 12px;
+$br-main: 24px;
+$br-second-main: 25px;
+$br-half-round: 50px;
+$br-rounded: 50%;
+$br-small: 12px;
+
+// Font-size
+
+$fz-small: 12px;
+$fz-main: 16px;
+$fz-medium-less: 20px;
+$fz-medium: 30px;
+$fz-big: 60px;
+
+$fz-main-mobile: 14px;
+$fz-medium-mobile: 20px;
+$fz-big-mobile: 30px;
+
+// Window width
+
+$break-desk-big: 1340px;
+$break-desk: 1040px;
+
+$break-mobile: 767px;
+
+// Mouse-device
+
+$mouseDevice: '(hover: hover) and (pointer: fine)';

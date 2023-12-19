@@ -1,0 +1,40 @@
+.fitness-gyms {
+    position: relative;
+    padding: 0 0 100px;
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        top: -45px;
+        left: 0;
+        object-fit: scale-down;
+    }
+
+    &__inner {
+        padding: 100px 0 0;
+        position: relative;
+    }
+
+    &__info {
+        @include fcb;
+        
+        .fitness-gyms__head {
+            color: #fff;
+            font-weight: 800;
+        }
+
+        .fitness-gyms__button {
+            color: #fff;
+            border: 1px solid #fff;
+            font-size: 20px;
+            padding: 16px 43px;
+        }
+    }
+
+    &__name {
+        width: 600px;
+        margin: 0 0 40px;
+        color: #fff;
+        
+    }
+}

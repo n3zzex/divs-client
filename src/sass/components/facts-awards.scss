@@ -1,0 +1,44 @@
+.facts-awards {
+    padding: 80px 0 110px;
+
+    &__inner {
+        .facts-awards__head {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 0 0 10px;
+            color: #000;
+            
+            span {
+                color: $color-orange-main;
+            }
+        }
+        .facts-awards__caption {
+            margin: 0 0 30px;
+
+            .facts-awards-name {
+                font-size: 55px;
+                font-weight: 700;
+                color: $color-black-darken;
+                margin: 0 0 20px;
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+    }
+
+    &__item {
+        img {
+            margin: 0 0 20px;
+
+        }
+    }
+
+    &__text {
+        font-weight: 600;
+    }
+
+}

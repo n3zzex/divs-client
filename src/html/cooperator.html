@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Team Force</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        @@include("chunk/header.html")
+
+        <main class="main" id="main">
+            @@include("components/cooperator-main.html")
+            @@include("components/cooperator-documents.html")
+            @@include("components/important-documents.html")
+        </main>
+
+        @@include("chunk/footer.html")
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

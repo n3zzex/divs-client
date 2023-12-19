@@ -1,0 +1,63 @@
+.cooperator-documents {
+    padding: 250px 0 70px;
+    position: relative;
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+    }
+
+    &__box {
+        @include fc_;
+        position: absolute;
+        top: 40px;
+    }
+
+    .category-list__item:not(:last-child) {
+        margin: 0 20px 0 0;
+    }
+
+    &__item {
+        padding: 19px 50px;
+        white-space: nowrap;
+        font-size: 17px;
+        color: #fff;
+
+        &:not(:last-child) {
+            margin: 0 20px 0 0;
+        }
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    &__title {
+        font-weight: 800;
+        margin: 0 0 35px;
+    }
+
+    .cooperator-documents-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        &__item {
+            @include fc_;
+            color: $color-black-darken;
+            font-weight: 600;
+            white-space: nowrap;
+
+            img {
+                width: 27px;
+                height: 27px;
+                object-fit: cover;
+                margin: 0 32px 0 0;
+            }
+
+        }
+    }
+
+
+}

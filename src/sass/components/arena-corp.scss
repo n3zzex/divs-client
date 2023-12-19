@@ -1,0 +1,63 @@
+.arena-corp {
+
+    &__inner {
+        padding: 100px 0;
+    }
+
+    &__head {
+        font-weight: 600;
+    }
+
+    &__title {
+        margin: 0 0 35px;
+    }
+
+    &__photos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin: 0 0 35px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__title {
+            font-weight: 600;
+            font-size: 20px;
+            margin: 0 0 30px;
+            text-align: center;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px 35px;
+        }
+
+        &__box {
+            @include fcc;
+            gap: 30px 35px;
+            margin: 0 0 45px
+        }
+
+        &__item {
+            @include fc_;
+
+            img {
+                margin: 0 14px 0 0;
+            }
+        }
+
+        &__bottom {
+            @include fc_;
+
+            img {
+                margin: 0 18px 0 0;
+            }
+        }
+    }
+}

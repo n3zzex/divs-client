@@ -1,0 +1,98 @@
+.fitness-about {
+    padding: 235px 0 100px;
+    position: relative;
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+    }
+
+    &__swab {
+        position: absolute;
+        top: 74px;
+        left: 34px;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__inner {
+
+        .facts-list {
+            
+            &__icon {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    margin: 0 0 12px;
+                }
+            }
+
+            
+            &__name {
+                text-align: center;
+                color: $color-purple-button;
+            }
+
+            &__text {
+                text-align: center;
+                margin: 55px 0 20px;
+            }
+
+            &__icons {
+                @include fcc;
+            }
+
+        }
+    }
+
+    &__photos {
+        margin: 0 70px 0 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 30px;
+
+        img:first-child {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+
+    &__head {
+        font-size: 25px;
+        font-weight: 800;
+        margin: 0 0 10px;
+        
+        span {
+            color: $color-orange-main;
+        }
+    }
+
+    &__title {
+        margin: 0 0 10px;
+        font-size: 55px;
+        font-weight: 700;
+    }
+
+    &__description {
+        width: 656px;
+        margin: 0 0 35px;
+        color: $color-black-darken;
+        line-height: 30px;
+        font-weight: 300;
+
+        span {
+            font-weight: 400;
+        }
+    }
+
+    .statistics {
+        margin: 0 0 70px;
+    }
+}

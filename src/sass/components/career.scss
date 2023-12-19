@@ -1,0 +1,82 @@
+.career {
+
+    // &__bg {
+    //     width: 100%;
+    //     position: absolute;
+    //     z-index: 5;
+    //     object-fit: cover;
+    //     overflow: hidden;
+    // }
+
+
+    &__inner {
+        padding: 76px 0 116px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $color-white-main;
+    }
+
+    &__date {
+        font-weight: 500;
+        font-size: $fz-medium;
+        margin: 0 0 10px;
+    }
+
+    &__title {
+        width: 556px;
+        font-weight: 700;
+        font-size: $fz-big;
+        text-transform: uppercase;
+        margin: 0 0 30px;
+    }
+
+    &__description {
+        width: 500px;
+        font-weight: 500;
+        font-size: $fz-medium;
+    }
+
+    .career-category {
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        @include fc_;
+        gap: 15px;
+
+        &__item {
+            cursor: pointer;
+            transform: scale(1);
+            @include transition;
+            &:hover {
+                transform: scale(1.2);
+                z-index: 5;
+            }
+            
+            img {
+                width: 229px;
+                height: 100%;
+                margin: 0 0 40px;
+            }
+
+            .career-category__name {
+                font-weight: 700;
+                font-size: 20px;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+
+    .arena-main-title {
+        width: 715px;
+    }
+    
+    .arena-main-description {
+        width: 655px;
+    }
+
+    .gyms-main-title {
+        width: 613px;
+    }
+}

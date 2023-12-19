@@ -1,0 +1,28 @@
+.arena-scheme {
+    position: relative;
+    padding: 0 0 90px;
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+    }
+
+    &__inner {
+        padding: 50px 0 0;
+    }
+
+    h1 {
+        margin: 0 0 50px;
+        color: #fff;
+    }
+
+    &__scheme {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}

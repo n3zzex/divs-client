@@ -1,0 +1,108 @@
+.main-arena {
+    background-image: url("../img/main-arena-bg.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    &__inner {
+        padding: 120px 0 0;
+        .main-arena__slider {
+            position: relative;
+            background-color: #f1f1f1;
+            padding: 40px;
+    
+    
+            .main-arena__item {
+    
+                img {
+                    @include width-height(100%, 100%); 
+                    object-fit: cover;
+                }
+            }
+    
+            .main-arena__prev,
+            .main-arena__next {
+                @include width-height(32px, 32px);
+                position: absolute;
+                top: 92px;
+                background-color: $color-purple-button;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: $br-rounded;
+                object-fit: cover;
+                z-index: 10;
+            }
+    
+            .main-arena__prev {
+                left: 20px;
+            }
+    
+            .main-arena__next {
+                right: 20px;
+            }
+        }
+    
+    }
+    
+
+
+
+    &__content {
+        @include fc_;
+    }
+
+    &__info {
+        margin: 0 45px 0 0;
+
+        .main-arena__head {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 0 0 10px;
+
+            span {
+                color: $color-orange-main;
+            }
+        }
+
+        .main-arena__title {
+            margin: 0 0 20px;
+            font-size: 55px;
+            font-weight: 700;
+        }
+
+        .main-arena__description {
+            width: 640px;
+            margin: 0 0 35px;
+            color: $color-black-darken;
+            line-height: 30px;
+        }
+
+        .statistics {
+            margin: 0 0 40px;
+            display: flex;
+            align-items: flex-start;
+
+            &__item {
+                font-weight: 600;
+                color: $color-black-darken;
+
+                span {
+                    font-weight: 800;
+                    font-size: 32px;
+                    color: $color-orange-main;
+                    white-space: nowrap;
+                    margin: 0 0 10px;
+                }
+
+                &:not(:last-child) {
+                    margin: 0 50px 0 0;
+                }
+            }
+        }
+
+        .main-arena__button {
+            display: flex;
+            padding: 16px 38px !important;
+        }
+    }
+}

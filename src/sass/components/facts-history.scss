@@ -1,0 +1,28 @@
+.facts-history {
+    padding: 0 0 90px;
+
+    &__title {
+        position: relative;
+        top: -54px;
+        left: 40px;
+        font-size: 25px;
+        font-weight: 800;
+        color: #fff;
+    }
+
+    &__text {
+        &:not(:last-child) {
+            margin: 0 0 50px;
+        }
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__photos {
+        @include fc_;
+        gap: 38px;
+        margin: 0 0 40px;
+    }
+}

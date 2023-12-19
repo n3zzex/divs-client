@@ -1,0 +1,132 @@
+@import "./usable/vendor.scss";
+
+.header {
+    &__inner {
+        @include fc_;
+        min-height: 130px;
+
+        .header__logo {
+            margin: 0 50px 0 0;
+        }
+    }
+
+    &__item {
+        @include fc_;
+    }
+
+    &__contacts {
+        .menu {
+            position: relative;
+            @include fcb;
+            margin: 0 0 20px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                bottom: -10px;
+                background-color: rgba(117, 117, 117, 0.6);
+            }
+
+            &__list {
+                @include fc_;
+
+                .menu__item {
+                    @include fc_;
+                    padding: 8px 16px;
+                    cursor: pointer;
+
+                    .menu__link {
+                        margin: 0 0 0 8px;
+                        white-space: nowrap;
+
+                        &:not(:last-child) {
+                            margin: 0 8px 0 0;
+                        }
+                    }
+                }
+            }
+
+            .contact {
+                @include fc_;
+
+                &__link {
+                    white-space: nowrap;
+                    margin: 0 25px 0 0;
+                }
+            }
+        }
+
+        .nav {
+            @include fcb;
+            position: relative;
+
+            &::before {
+                @include transition;
+                content: "";
+                position: absolute;
+                top: -10px;
+                width: 100%;
+                height: 2px;
+                background-color: $color-purple-button;
+                opacity: 0;
+            }
+
+            &__list {
+                @include fc_;
+            }
+
+            &__item {
+                position: relative;
+                @include fcc;
+                padding: 8px 16px;
+                margin: 0 32px 0 0;
+                cursor: pointer;
+            }
+
+            &__link {
+                white-space: nowrap;
+                margin: 0 4px 0 0;
+                font-weight: 500;
+                font-size: 17px;
+            }
+
+            .nav__sub-list {
+                position: absolute;
+                top: 100%;
+                z-index: 5;
+
+                li {
+                    @include transition;
+                    padding: 10px 15px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    background-color: #fff;
+
+                    &:hover {
+                        background-color: #1b3281;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .user-actions {
+                @include fc_;
+                gap: 0 30px;
+        
+                &__language {
+                    @include fc_;
+        
+                    .user-actions__button {
+                        font-weight: 500;
+                        font-size: $fz-main;
+                        color: $color-black-lighten;
+                        margin: 0 4px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.poster-main {
+    padding: 76px 0 54px;
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        bottom: -147px;
+        z-index: 100;
+    }
+
+    .poster-main-slider {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &__next {
+        position: absolute;
+        right: 15%;
+        top: 34%;
+        z-index: 10;
+    }
+
+    &__prev {
+        position: absolute;
+        left: 15%;
+        top: 34%;
+        z-index: 10;
+    }
+
+    &__inner {
+        padding: 0 80px 54px;
+        color: $color-white-main;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: $fz-big;
+        margin: 0 0 10px;
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: $fz-medium;
+        max-width: 636px;
+        margin: 0 0 35px;
+    }
+
+    &__button {
+        display: flex;
+        padding: 22px 38px !important;
+        font-size: $fz-main !important;
+    }
+}

@@ -1,0 +1,29 @@
+.advertisers-section {
+    padding: 0 0 100px;
+
+    .breadcrumbs {
+        margin: 50px 0 40px;
+
+        .breadcrumbs__link:not([href]) {
+            font-weight: 400;
+            color: $color-black-darken;
+        }
+    }
+
+    &__head {
+        margin: 0 0 30px;
+    }
+
+    &__title {
+        margin: 0 0 40px;
+    }
+
+    .advertisers-section__item {
+        border-radius: 10px;
+        img {
+            width: 100%;
+            min-height: 273px;
+            object-fit: cover;
+        }
+    }
+}

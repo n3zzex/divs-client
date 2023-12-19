@@ -1,0 +1,91 @@
+.arena-concert {
+    position: relative;
+    background-color: #f1f1f1;
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        top: -490px;
+        left: 0;
+        object-fit: scale-down;
+
+    }
+
+
+    &__inner {
+        position: relative;
+        top: -180px;
+        z-index: 5;
+    }
+
+    .arena-concert__title {
+        color: #fff;
+        text-align: center;
+        margin: 0 0 50px;
+    }
+
+    &__head {
+        color: #fff;
+    }
+
+    .main-arena__slider {
+        position: relative;
+        background-color: #f1f1f1;
+        padding: 40px;
+
+
+        .main-arena__item {
+
+            img {
+                @include width-height(100%, 100%); 
+                object-fit: cover;
+            }
+        }
+
+        .main-arena__prev,
+        .main-arena__next {
+            @include width-height(32px, 32px);
+            position: absolute;
+            top: 92px;
+            background-color: $color-purple-button;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: $br-rounded;
+            object-fit: cover;
+            z-index: 10;
+        }
+
+        .main-arena__prev {
+            left: 20px;
+        }
+
+        .main-arena__next {
+            right: 20px;
+        }
+    }
+
+    &__info {
+        align-items: flex-end;
+    }
+
+    .arena-events__features {
+        margin: 0 40px 0 0
+    }
+
+    .info-box {
+
+        &__item {
+            @include fc_;
+            
+            &:not(:last-child) {
+                margin: 0 0 20px;
+            }
+
+            img {
+                margin: 0 15px 0 0;
+            }
+        }
+    }
+
+}

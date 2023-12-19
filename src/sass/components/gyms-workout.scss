@@ -1,0 +1,82 @@
+.gyms-workout {
+    padding: 240px 0 100px;
+    position: relative;
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+    }
+
+    &__head {
+        margin: 0 0 20px;
+        font-weight: 800;
+    }
+
+    &__title {
+        // white-space: nowrap;
+        margin: 0 0 25px;
+    }
+
+    &__description {
+        line-height: 30px;
+        margin: 0 0 40px;
+    }
+
+    &__content {
+        @include fc_;
+
+        .gym-photo {
+            margin: 0 40px 0 0;
+        }
+    }
+
+    &__statistic {
+        @include fc_;
+        margin: 0 0 25px;
+
+        span {
+            font-size: 32px;
+            font-weight: 800;
+            margin: 0 28px 0 0;
+            color: $color-orange-main;
+        }
+
+        p {
+            width: 78px;
+            font-weight: 600;
+        }
+    }
+
+    .question {
+        margin: 0;
+    }
+}
+
+.mini-bg {
+    width: 100%;
+    position: relative;
+    margin: 0 0 18px;
+
+    &__text {
+        position: absolute;
+        top: 9px;
+        left: 22px;
+
+        font-weight: 800;
+        color: #fff;
+        
+    }
+}
+
+.info {
+    &__item {
+        @include fc_;
+        margin: 0 0 18px;
+
+        img {
+            margin: 0 14px 0 0;
+        }
+    }
+
+}
