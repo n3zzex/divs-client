@@ -1,25 +1,22 @@
-const mainArenaSlider = document.querySelector(".main-arena__slider")
 
+const mainArenaSlider = document.querySelector(".main-arena__slider");
 
-const arenaSlider = new Swiper(mainArenaSlider, {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    centerMode: true,
-    on: {
-      init: function () {
-        
-      }
+const mainSliderConfig = {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  centerMode: true,
+
+  pagination: {
+      el: ".main-arena__pagination",
+      type: "bullets",
+      clickable: true,
     },
 
-    pagination: {
-        el: ".main-arena__pagination",
-        type: "bullets",
-        clickable: true,
-      },
+  navigation: {
+    nextEl: '.main-arena__next',
+    prevEl: '.main-arena__prev',
+  },
+  
+}
 
-    navigation: {
-      nextEl: '.main-arena__next',
-      prevEl: '.main-arena__prev',
-    },
-    
-  });
+new Swiper(mainArenaSlider, mainSliderConfig);
