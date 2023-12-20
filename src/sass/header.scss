@@ -5,8 +5,17 @@
         @include fc_;
         min-height: 130px;
 
+        @include break-desk-big {
+            min-height: 150px;
+        }
+
         .header__logo {
             margin: 0 50px 0 0;
+
+            @include break-desk-big {
+                margin: 0 25px 0 0;
+            }
+
         }
     }
 
@@ -31,6 +40,10 @@
 
             &__list {
                 @include fc_;
+
+                @include break-desk-big {
+                    flex-wrap: wrap;
+                }
 
                 .menu__item {
                     @include fc_;
@@ -83,6 +96,18 @@
                 padding: 8px 16px;
                 margin: 0 32px 0 0;
                 cursor: pointer;
+
+                @include break-desk-big {
+                    margin: 0 4px 0 0;
+                }
+
+                &:hover {
+                    .nav__sub-list {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+
             }
 
             &__link {
@@ -93,9 +118,17 @@
             }
 
             .nav__sub-list {
+                @include transition;
                 position: absolute;
                 top: 100%;
                 z-index: 5;
+                opacity: 0;
+                pointer-events: none;
+
+                &:hover {
+                    opacity: 1;
+                    pointer-events: all
+                }
 
                 li {
                     @include transition;

@@ -19,6 +19,7 @@ const gulGroupCssMediaQueries = require('gulp-group-css-media-queries');
 const gulpSass = require('gulp-sass')(require('sass'));
 const gulpSassGlob = require('gulp-sass-glob');
 const gulpWebPCss = require('gulp-webp-css');
+const cleanCss = require("gulp-clean-css");
 const app = require('../config/app.js');
 
 
@@ -43,6 +44,7 @@ const scss = () => {
             title: "Min SCSS file"
         }))
         .pipe(gulpCssO())
+        .pipe(cleanCss({ level: { 2: { removeDuplicateRules: true } } }))
         .pipe(dest(path.scss.dest, {sourcemaps: app.isDev}))
         .pipe(gulpSize({
             title: "Normal SCSS file"

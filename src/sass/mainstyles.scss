@@ -385,6 +385,11 @@
     grid-template-columns: 1fr 1fr;
     gap: 52px;
 
+    @include break-desk-big {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
     &__item {
         display: flex; 
         flex-direction: column;
@@ -398,6 +403,11 @@
         
         .gyms-list__button {
             margin-top: auto;
+
+            @include break-desk-big {
+                width: 100%;
+            }
+
         }
     }
 }

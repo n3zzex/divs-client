@@ -61,12 +61,17 @@
         }
     }
 
-    .concert-category {
-        position: absolute;
-        bottom: 0;
-        z-index: 10;
+    &-category {
         @include fc_;
+        width: 100%;
+        position: absolute;
+        bottom: -70px;
+        z-index: 10;
         gap: 15px;
+
+        @include break-desk-big {
+            overflow: auto;
+        }
 
         .concert-category__item {
             &:hover {
@@ -82,7 +87,6 @@
             transform: scale(1);
             cursor: pointer;
             &:hover {
-                transform: scale(1.4);
                 opacity: 1;
                 z-index: 10;
 
