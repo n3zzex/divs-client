@@ -35,6 +35,10 @@
             grid-template-columns: 1fr 1fr 1fr;
             gap: 24px;
 
+            @include break-desk-big {
+                grid-template-columns: 1fr;
+            }
+
             &__item {
                 display: flex; 
                 flex-direction: column;
@@ -48,6 +52,12 @@
                 
                 .rooms-list__button {
                     margin-top: auto;
+
+
+                    @include break-desk-big {
+                        width: 100%;
+                    }
+
                 }
             }
         }
