@@ -1,6 +1,9 @@
 .map {
-
     position: relative;
+
+    @include break-desk-big {
+        display: none;
+    }
 
     &__bg {
         width: 100%;

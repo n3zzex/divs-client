@@ -16,6 +16,11 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 80px;
+
+        @include break-mobile {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
     }
 
     &__title {

@@ -20,38 +20,6 @@
         align-items: flex-start;
     }
 
-    &__inner {
-
-        .facts-list {
-            
-            &__icon {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                img {
-                    margin: 0 0 12px;
-                }
-            }
-
-            
-            &__name {
-                text-align: center;
-                color: $color-purple-button;
-            }
-
-            &__text {
-                text-align: center;
-                margin: 55px 0 20px;
-            }
-
-            &__icons {
-                @include fcc;
-            }
-
-        }
-    }
-
     &__photos {
         margin: 0 70px 0 0;
         display: grid;

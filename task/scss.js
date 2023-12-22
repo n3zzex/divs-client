@@ -38,6 +38,7 @@ const scss = () => {
         .pipe(gulpAutoprefixer())
         .pipe(gulpShorthand())
         .pipe(gulGroupCssMediaQueries())
+        .pipe(cleanCss({ level: { 2: { removeDuplicateRules: true } } }))
         .pipe(dest(path.scss.dest, {sourcemaps: app.isDev}))
         .pipe(gulpRename({suffix: ".min"}))
         .pipe(gulpSize({

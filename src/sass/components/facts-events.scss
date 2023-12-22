@@ -1,6 +1,14 @@
 .facts-events {
     padding: 0 0 90px;
 
+    &__bg {
+        width: 100%;
+
+        @include break-desk {
+            display: none;
+        }
+    }
+
     &__title {
         position: relative;
         top: -54px;
@@ -8,6 +16,18 @@
         font-size: 25px;
         font-weight: 800;
         color: #fff;
+
+        @include break-desk-big {
+            left: 10px;
+            font-size: 24px;
+        }
+
+        @include break-desk {
+            top: -35px;
+            font-size: 25px;
+            left: 0;
+            color: $color-black-darken;
+        }
     }
 
     &__text {
@@ -27,8 +47,11 @@
 
     .facts-blocks {
         display: flex;
-
         gap: 20px;
+
+        @include break-mobile {
+            flex-direction: column;
+        }
 
         .facts-block {
 

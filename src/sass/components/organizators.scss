@@ -1,6 +1,14 @@
 .organizators {
     padding: 0 0 70px;
 
+    &__bg {
+        width: 100%;
+        overflow: hidden;
+        @include break-desk {
+            display: none;
+        }
+    }
+
     &__title {
         position: relative;
         top: -54px;
@@ -8,6 +16,13 @@
         font-size: 25px;
         font-weight: 800;
         color: #fff;
+
+        @include break-desk {
+            left: 0;
+            top: -25px;
+            font-size: 25px;
+            color: $color-black-darken;
+        }
     }
 
     &__text {
@@ -30,6 +45,11 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
+
+        @include break-mobile {
+            grid-template-columns: 1fr;
+            gap: 15px
+        }
 
         &__item {
             @include fc_;
