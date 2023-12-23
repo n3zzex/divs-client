@@ -1,6 +1,14 @@
 .important-documents {
     padding: 0 0 100px;
 
+    &__bg {
+        width: 100%;
+        overflow: hidden;
+        @include break-desk-big {
+            display: none;
+        }
+    }
+
     &__title {
         position: relative;
         top: -54px;
@@ -8,6 +16,13 @@
         font-size: 25px;
         font-weight: 800;
         color: #fff;
+
+        @include break-desk-big {
+            left: 0;
+            top: -25px;
+            font-size: 25px;
+            color: $color-black-darken;
+        }
     }
 
     &__text {
@@ -24,6 +39,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+
+        @include break-desk {
+            grid-template-columns: 1fr
+        }
     }
 
     &__item {

@@ -1,9 +1,6 @@
 .fitnes-drive {
-    // padding: 0 0 70px;
+    padding: 0 0 100px;
 
-    .fitness-drive__inner {
-
-    }
 
     .fitness-drive__number {
         font-weight: 800;
@@ -15,8 +12,17 @@
     .format-block {
         @include fc_;
 
+        @include break-desk-big {
+            flex-direction: column;
+        }
+
         img {
             margin: 0 60px 0 0;
+
+            @include break-desk-big {
+                width: 100%;
+                margin: 0 0 30px;
+            }
         }
 
         &__title {
@@ -33,6 +39,15 @@
         &__button {
             padding: 18px 54px;
             font-size: 20px;
+
+            @include break-desk-big {
+                width: 100%;
+                font-size: 16px;
+            }
+
+            @include break-mobile-small {
+                font-size: 14px;
+            }
         }
     }
 

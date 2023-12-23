@@ -11,6 +11,9 @@
         top: 74px;
         left: 35px;
         
+        @include break-desk-big {
+            display: none;
+        }
     }
 
     &__inner {
@@ -25,6 +28,19 @@
         grid-template-columns: 1fr 1fr;
         gap: 20px 30px;
 
+        
+        @include break-desk-big {
+            width: 100%;
+            margin: 0 0 30px 0;
+
+            display: flex;
+            flex-wrap: wrap;
+            img {
+                width: 100%;
+            }
+
+        }
+
         img:first-child {
             grid-column-start: 1;
             grid-column-end: 3;
@@ -34,10 +50,13 @@
     .hotel__content {
         @include fc_;
         margin: 0 0 50px;
+
+        @include break-desk-big {
+            flex-direction: column;
+        }
     }
 
     &__info {
-
         .hotel__head {
             font-size: 25px;
             font-weight: 800;
@@ -47,6 +66,14 @@
             span {
                 color: $color-orange-lighten;
             }
+
+            @include break-mobile {
+                font-size: 24px;
+            }
+        
+            @include break-mobile-small {
+                font-size: 20px;
+            }
         }
 
         .hotel__title {
@@ -54,6 +81,15 @@
             font-size: 55px;
             font-weight: 700;
             color: #fff;
+
+            @include break-mobile {
+                width: 100%;
+                font-size: 40px;
+            }
+        
+            @include break-mobile-small {
+                font-size: 32px;
+            }
         }
 
         .hotel__description {
@@ -62,12 +98,26 @@
             color: $color-black-darken;
             line-height: 30px;
             color: #fff;
+
+            @include break-desk-big {
+                width: 100%;
+            }
         }
 
         .statistics {
             margin: 0 0 40px;
             display: flex;
             align-items: flex-start;
+
+            @include break-desk-big {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            @include break-mobile-small {
+                grid-template-columns: 1fr;
+            }
 
             &__item {
                 font-weight: 600;
@@ -81,10 +131,19 @@
                     white-space: nowrap;
                     margin: 0 0 10px;
 
+                    @include break-mobile-small {
+                        font-size: 25px;
+                        margin: 0 10px 0 0;
+                    }
+
                 }
 
                 &:not(:last-child) {
                     margin: 0 50px 0 0;
+
+                    @include break-desk-big {
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -92,6 +151,10 @@
         .hotel__button {
             display: flex;
             padding: 16px 38px !important;
+
+            @include break-desk-big {
+                width: 100%;
+            }
         }
     }
 
@@ -99,8 +162,14 @@
         @include fc_;
         gap: 38px;
 
+        @include break-desk-big {
+            flex-direction: column;
+            align-items: normal;
+        }
+
         img {
             margin: 0 0 24px;
+            width: 100%;
         }
 
         &__title {
@@ -117,6 +186,10 @@
                 opacity: 1;
                 color: #fff;
                 background-color: $color-orange-lighten;
+            }
+
+            @include break-desk-big {
+                width: 100%;
             }
         }
     }

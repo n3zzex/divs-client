@@ -9,6 +9,16 @@
         margin: 20px 0 0;
         font-size: $fz-medium;
         font-weight: 700;
+
+        @include break-mobile {
+            flex-direction: column;
+            align-items: normal;
+            font-size: 25px;
+        }
+
+        @include break-mobile-small {
+            font-size: 20px;
+        }
         
         p {
             margin: 0 10px 0 0;

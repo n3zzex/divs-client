@@ -123,6 +123,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                 }
             }
             img {
@@ -138,6 +139,10 @@
                 color: #fff;
                 text-align: center;
                 opacity: 1;
+
+                @include break-desk-big {
+                    color: $color-black-darken;
+                }
             }
         }
     }

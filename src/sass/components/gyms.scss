@@ -6,6 +6,10 @@
         position: absolute;
         top: -45px;
         left: 0;
+
+        @include break-desk-big {
+            display: none;
+        }
     }
 
 
@@ -22,6 +26,18 @@
             span {
                 color: $color-orange-main;
             }
+
+            @include break-desk-big {
+                color: $color-black-darken;
+            }
+
+            @include break-mobile {
+                font-size: 24px;
+            }
+        
+            @include break-mobile-small {
+                font-size: 20px;
+            }
         }
 
 
@@ -30,22 +46,49 @@
             align-items: flex-end;
             margin: 0 0 40px;
 
+            @include break-desk-big {
+                flex-direction: column-reverse;
+                align-items: normal;
+            }
+
             .gyms__info {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
+
+                @include break-desk-big {
+                    align-items: normal;
+                    margin: 0 0 20px;
+                }
             }
 
             .gyms-name {
                 font-size: 55px;
                 font-weight: 700;
                 color: #fff;
+
+                @include break-desk-big {
+                    color: $color-black-darken;
+                }
+
+                @include break-mobile {
+                    width: 100%;
+                    font-size: 40px;
+                }
+            
+                @include break-mobile-small {
+                    font-size: 32px;
+                }
             }
 
             .gyms__button {
                 display: flex;
                 padding: 16px 38px;
                 white-space: nowrap;
+
+                @include break-desk-big {
+                    width: 100%;
+                }
             }
         }
     }

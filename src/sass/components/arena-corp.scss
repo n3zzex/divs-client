@@ -4,12 +4,15 @@
         padding: 100px 0;
     }
 
-    &__head {
-        font-weight: 600;
-    }
-
     &__title {
         margin: 0 0 35px;
+    }
+
+    &__head {
+
+        @include break-mobile-small {
+            font-size: 20px;
+        }
     }
 
     &__photos {
@@ -17,6 +20,16 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
         margin: 0 0 35px;
+
+        @include break-desk {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     .info {
@@ -24,6 +37,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @include break-desk {
+            align-items: normal;
+        }
 
         &__title {
             font-weight: 600;
@@ -41,7 +58,12 @@
         &__box {
             @include fcc;
             gap: 30px 35px;
-            margin: 0 0 45px
+            margin: 0 0 45px;
+
+            @include break-desk {
+                flex-direction: column;
+                align-items: normal;
+            }
         }
 
         &__item {

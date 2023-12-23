@@ -1,0 +1,10 @@
+.rent-main {
+
+    &__inner {
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $color-white-main;
+    }
+}

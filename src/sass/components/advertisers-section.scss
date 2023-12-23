@@ -12,10 +12,18 @@
 
     &__head {
         margin: 0 0 30px;
+
+        @include break-mobile-small {
+            font-size: 20px;
+        }
     }
 
     &__title {
         margin: 0 0 40px;
+
+        @include break-mobile-small {
+            font-size: 25px;
+        }
     }
 
     .advertisers-section__item {

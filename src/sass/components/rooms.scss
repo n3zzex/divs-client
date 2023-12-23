@@ -12,21 +12,51 @@
             span {
                 color: $color-orange-main;
             }
+
+            @include break-mobile {
+                font-size: 24px;
+            }
+        
+            @include break-mobile-small {
+                font-size: 20px;
+            }
         }
         .rooms__caption {
             @include fcb;
             margin: 0 0 35px;
 
+            @include break-desk-big {
+                flex-direction: column;
+                align-items: normal;
+            }
+
             .rooms-name {
                 font-size: 55px;
                 font-weight: 700;
                 color: $color-black-darken;
+
+                @include break-desk-big {
+                    margin: 0 0 20px;
+                }
+
+                @include break-mobile {
+                    width: 100%;
+                    font-size: 40px;
+                }
+            
+                @include break-mobile-small {
+                    font-size: 32px;
+                }
             }
 
             .rooms__button {
                 display: flex;
                 padding: 16px 38px;
                 white-space: nowrap;
+
+                @include break-desk-big {
+                    width: 100%;
+                }
             }
         }
 
@@ -43,6 +73,7 @@
                 display: flex; 
                 flex-direction: column;
                 .rooms-list__image {
+                    width: 100%;
                     margin: 0 0 18px;
                 }
 

@@ -7,6 +7,10 @@
         width: 100%;
         z-index: 1;
         object-fit: scale-down;
+
+        @include break-desk-big {
+            display: none;
+        }
     }
 
     &__inner {
@@ -15,6 +19,9 @@
         right: 300px;
         z-index: 100;
 
+        @include break-desk-big {
+            position: unset;
+        }
     }
 
     &__head {
@@ -31,6 +38,10 @@
         width: 700px;
         margin: 0 0 30px;
         font-size: 20px;
+
+        @include break-mobile {
+            width: 100%;
+        }
     }
 
     &__button {

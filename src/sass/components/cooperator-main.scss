@@ -15,6 +15,10 @@
         span {
             color: $color-orange-main;
         }
+
+        @include break-desk {
+            font-size: 32px;
+        }
     }
 
 

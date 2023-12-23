@@ -7,6 +7,10 @@
         width: 100%;
         position: absolute;
         top: 0;
+
+        @include break-desk-big {
+            display: none;
+        }
     }
 
     &__swab {
@@ -49,8 +53,6 @@
 
         }
 
-        
-
         img:first-child {
             grid-column-start: 1;
             grid-column-end: 3;
@@ -68,12 +70,29 @@
             span {
                 color: $color-orange-main;
             }
+
+            @include break-mobile {
+                font-size: 24px;
+            }
+        
+            @include break-mobile-small {
+                font-size: 20px;
+            }
         }
 
         .about-us__title {
             margin: 0 0 10px;
             font-size: 55px;
             font-weight: 700;
+
+            @include break-mobile {
+                width: 100%;
+                font-size: 40px;
+            }
+        
+            @include break-mobile-small {
+                font-size: 32px;
+            }
         }
 
         .about-us__description {
@@ -81,6 +100,10 @@
             margin: 0 0 35px;
             color: $color-black-darken;
             line-height: 30px;
+
+            @include break-desk-big {
+                width: 100%;
+            }
         }
 
         .statistics {
@@ -94,7 +117,7 @@
                 gap: 20px;
             }
 
-            @include break-desk {
+            @include break-mobile-small {
                 grid-template-columns: 1fr;
             }
 
@@ -111,6 +134,10 @@
                     white-space: nowrap;
                     margin: 0 0 10px;
 
+                    @include break-mobile-small {
+                        font-size: 25px;
+                        margin: 0 10px 0 0;
+                    }
                 }
 
                 &:not(:last-child) {
@@ -129,6 +156,10 @@
             display: flex;
             padding: 16px 38px;
             z-index: 100;
+
+            @include break-desk-big {
+                width: 100%;
+            }
         }
     }
 }

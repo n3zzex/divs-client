@@ -12,12 +12,20 @@
         position: absolute;
         top: 74px;
         left: 34px;
+
+        @include break-desk-big {
+            display: none;
+        }
     }
 
     &__wrapper {
         position: relative;
         display: flex;
         align-items: flex-start;
+
+        @include break-desk-big {
+            flex-direction: column;
+        }
     }
 
     &__photos {
@@ -29,6 +37,18 @@
         img:first-child {
             grid-column-start: 1;
             grid-column-end: 3;
+        }
+
+        @include break-desk-big {
+            width: 100%;
+            margin: 0 0 30px 0;
+
+            display: flex;
+            flex-wrap: wrap;
+            img {
+                width: 100%;
+            }
+
         }
     }
 
@@ -55,6 +75,10 @@
         line-height: 30px;
         font-weight: 300;
 
+        @include break-mobile {
+            width: 100%;
+        }
+
         span {
             font-weight: 400;
         }
@@ -62,5 +86,15 @@
 
     .statistics {
         margin: 0 0 70px;
+
+        @include break-desk-big {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @include break-desk {
+            grid-template-columns: 1fr;
+        }
     }
 }

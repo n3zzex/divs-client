@@ -6,6 +6,10 @@
         position: absolute;
         top: -180px;
         left: 0;
+
+        @include break-desk-big {
+            display: none;
+        }
     }
 
 
@@ -24,35 +28,70 @@
             span {
                 color: $color-orange-main;
             }
+
+            @include break-desk-big {
+                color: $color-black-darken;
+            }
+
+            @include break-mobile {
+                font-size: 24px;
+            }
+        
+            @include break-mobile-small {
+                font-size: 20px;
+            }
         }
 
         .news__caption {
             @include fcb;
-            margin: 0 0 50px;
-
             position: relative;
-
+            margin: 0 0 50px;
             z-index: 5;
+
+            @include break-desk-big {
+                flex-direction: column;
+                align-items: normal;
+            }
 
             .news-name {
                 font-size: 55px;
                 font-weight: 700;
                 color: #fff;
+
+                @include break-desk-big {
+                    color: $color-black-darken;
+                    margin: 0 0 20px;
+                }
+
+                @include break-mobile {
+                    font-size: 40px;
+                }
+            
+                @include break-mobile-small {
+                    font-size: 32px;
+                }
             }
 
             .news__button {
                 display: flex;
                 padding: 16px 26px;
                 white-space: nowrap;
+
+                @include break-desk-big {
+                    width: 100%;
+                }
             }
         }
 
         .slider {
             display: flex;
-            
             position: relative;
             z-index: 3;
             gap: 34px;
+
+            @include break-desk-big {
+                flex-direction: column;
+            }
 
             &__item {
                 display: flex;
@@ -81,6 +120,10 @@
                 .slider__button {
                     padding: 16px 38px !important;
                     margin-top: auto;
+
+                    @include break-desk-big {
+                        width: 100%;
+                    }
                 }
             }
         }

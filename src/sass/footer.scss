@@ -7,7 +7,7 @@
 
     overflow: hidden;
 
-    min-height: 622px;
+    // min-height: 622px;
     
     &__bg {
         position: absolute;
@@ -17,6 +17,10 @@
 
     &__inner {
         padding: 230px 0 80px;
+
+        @include break-desk-big {
+            padding: 110px 0 80px;
+        }
 
         .footer-info {
             font-size: 12px;

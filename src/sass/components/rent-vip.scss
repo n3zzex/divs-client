@@ -1,12 +1,5 @@
-.gyms-workout {
-    padding: 240px 0 100px;
-    position: relative;
-    overflow: hidden;
-
-    &__bg {
-        position: absolute;
-        top: 0;
-    }
+.rent-vip {
+    padding: 0 0 460px;
 
     &__head {
         margin: 0 0 20px;
@@ -14,7 +7,6 @@
     }
 
     &__title {
-        // white-space: nowrap;
         margin: 0 0 25px;
     }
 
@@ -23,26 +15,41 @@
         margin: 0 0 40px;
     }
 
+    &__name {
+        margin: 0 0 20px;
+        font-weight: 600;
+        font-size: 35px;
+
+        @include break-desk-big {
+            margin: 20px 0;
+        }
+    }
+
     &__content {
         @include fc_;
+        margin: 0 0 40px;
 
         @include break-desk-big {
             flex-direction: column;
             align-items: normal;
         }
+    }
 
-        .gym-photo {
-            margin: 0 40px 0 0;
+    &__photo {
+        margin: 0 40px 0 0;
 
-            @include break-desk-big {
-                margin: 0 0 20px
-            }
-
-            img {
-                width: 100%;
-                object-fit: cover
-            }
+        @include break-desk-big {
+            margin: 0;
         }
+
+        img {
+            width: 100%;
+            object-fit: cover
+        }
+    }
+
+    &__slider {
+        background-color: #f1f1f1;
     }
 
     &__statistic {
@@ -67,9 +74,9 @@
         }
     }
 
-    .question {
-        margin: 0;
-    }
+    // .question {
+    //     margin: 0;
+    // }
 }
 
 .mini-bg {
@@ -92,7 +99,7 @@
         color: #fff;
 
         @include break-mobile {
-            top: -20px;
+            top: -30px;
             left: 0;
             color: $color-black-darken;
         }

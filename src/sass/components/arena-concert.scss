@@ -9,6 +9,9 @@
         left: 0;
         object-fit: scale-down;
 
+        @include break-desk-big {
+            display: none;
+        }
     }
 
 
@@ -18,14 +21,22 @@
         z-index: 5;
     }
 
-    .arena-concert__title {
+    &__title {
         color: #fff;
         text-align: center;
         margin: 0 0 50px;
+
+        @include break-desk-big {
+            color: $color-black-darken;
+        }
     }
 
     &__head {
         color: #fff;
+
+        @include break-desk-big {
+            color: $color-black-darken;
+        }
     }
 
     .main-arena__slider {
@@ -67,6 +78,9 @@
 
     &__info {
         align-items: flex-end;
+        @include break-desk-big {
+            align-items: normal;
+        }
     }
 
     .arena-events__features {
@@ -75,6 +89,9 @@
 
     .info-box {
 
+        @include break-desk-big {
+            margin: 0 0 20px
+        }
         &__item {
             @include fc_;
             

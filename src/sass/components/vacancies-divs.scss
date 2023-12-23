@@ -1,6 +1,32 @@
 .vacancies-divs {
     padding: 0 0 110px;
 
+    &__bg {
+        width: 100%;
+        overflow: hidden;
+        @include break-desk {
+            display: none;
+        }
+    }
+
+    &__title {
+        position: relative;
+        top: -54px;
+        left: 40px;
+        font-size: 25px;
+        font-weight: 800;
+        color: #fff;
+        white-space: nowrap;
+
+
+        @include break-desk {
+            left: 0;
+            top: -25px;
+            color: $color-black-darken;
+            white-space: pre-line;
+        }
+    }
+
     .accordion {
         @include fcb;
         border-radius: 10px;

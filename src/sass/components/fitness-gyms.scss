@@ -8,6 +8,10 @@
         top: -45px;
         left: 0;
         object-fit: scale-down;
+
+        @include break-desk-big {
+            display: none;
+        }
     }
 
     &__inner {
@@ -17,10 +21,19 @@
 
     &__info {
         @include fcb;
+
+        @include break-mobile {
+            flex-direction: column-reverse;
+            align-items: normal;
+        }
         
         .fitness-gyms__head {
             color: #fff;
             font-weight: 800;
+
+            @include break-desk-big {
+                color: $color-black-darken;
+            }
         }
 
         .fitness-gyms__button {
@@ -28,6 +41,22 @@
             border: 1px solid #fff;
             font-size: 20px;
             padding: 16px 43px;
+
+            @include break-desk-big {
+                color: $color-black-darken;
+                border: 1px solid $color-purple-button;
+            }
+
+            @include break-mobile {
+                width: 100%;
+                font-size: 16px;
+                margin: 0 0 20px;
+                padding: 16px 0;
+            }
+            
+            @include break-mobile-small {
+                font-size: 14px;
+            }
         }
     }
 
@@ -35,6 +64,10 @@
         width: 600px;
         margin: 0 0 40px;
         color: #fff;
+
+        @include break-desk-big {
+            color: $color-black-darken;
+        }
         
     }
 }
