@@ -1,0 +1,59 @@
+.hotel-slider {
+    position: relative;
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        top: -45px;
+        left: 0;
+
+        @include break-desk-big {
+            display: none;
+        }
+    }
+
+
+    &__inner {
+        padding: 90px 0;
+        position: relative;
+        z-index: 5;
+    }
+
+    &__head {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 0 10px;
+        
+        span {
+            color: $color-blue-darken;
+        }
+
+        @include break-desk-big {
+        }
+
+        @include break-mobile {
+            font-size: 24px;
+        }
+    
+        @include break-mobile-small {
+            font-size: 20px;
+        }
+    }
+
+    &__slider {
+        @include fc_;
+    }
+
+    &__item {
+
+    }
+
+    &__name {
+        font-size: 25px;
+        font-weight: 600;
+
+        span {
+            color: $color-blue-darken;
+        }
+    }
+}

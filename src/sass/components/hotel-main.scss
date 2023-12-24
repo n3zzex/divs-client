@@ -1,4 +1,9 @@
 .hotel-main {
+    padding: 100px 0;
+
+    &__inner {
+        color: #fff;
+    }
 
     &__description {
         margin: 0 0 25px;
@@ -8,5 +13,17 @@
         width: 870px;
         font-weight: 700;
         font-size: 40px;
+
+        @include break-desk {
+            width: 100%;
+        }
+
+        @include break-mobile {
+            font-size: 24px;
+        }
+    
+        @include break-mobile-small {
+            font-size: 20px;
+        }
     }
 }
