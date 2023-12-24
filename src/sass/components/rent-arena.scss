@@ -1,13 +1,48 @@
-.rent-press {
+.rent-arena {
     padding: 0 0 100px;
+    position: relative;
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        top: -270px;
+
+        @include break-desk-big {
+            display: none;
+        }
+    }
+
+    &__caption {
+        position: relative;
+        top: -180px;
+
+        @include break-desk-big {
+            top: -80px;
+        }
+
+        @include break-mobile {
+            top: -60px;
+        }
+    }
+
 
     &__head {
         margin: 0 0 20px;
-        font-weight: 800;
+        font-weight: 700;
+        color: #fff;
+
+        @include break-desk-big {
+            color: $color-black-darken;
+        }
     }
 
     &__title {
         margin: 0 0 25px;
+        color: #fff;
+
+        @include break-desk-big {
+            color: $color-black-darken;
+        }
     }
 
     &__description {
@@ -26,21 +61,17 @@
     }
 
     &__content {
-        display: flex;
+        @include fc_;
         flex-direction: row-reverse;
         margin: 0 0 40px;
 
         @include break-desk-big {
             flex-direction: column;
+            align-items: normal;
         }
     }
 
     &__photo {
-        margin: 0 40px 0 0;
-
-        @include break-desk-big {
-            margin: 0;
-        }
 
         img {
             width: 100%;
@@ -50,6 +81,10 @@
 
     &__features {
         margin: 0 40px 0 0;
+
+        @include break-desk-big {
+            margin: 0;
+        }
     }
 
     &__slider {
@@ -103,8 +138,8 @@
         color: #fff;
 
         @include break-mobile {
-            top: -30px;
-            left: 0;
+            top: -20px;
+            right: 0;
             color: $color-black-darken;
         }
     }
@@ -122,5 +157,30 @@
         img {
             margin: 0 14px 0 0;
         }
+    }
+}
+
+.info-list {
+    @include fc_;
+
+    @include break-mobile {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    &__item {
+        @include fc_;
+
+        &:not(:last-child) {
+            margin: 0 30px 0 0;
+
+            @include break-mobile {
+                margin: 0 0 15px;
+            }
+        }
+    }
+
+    img {
+        margin: 0 14px 0 0;
     }
 }
