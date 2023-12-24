@@ -47,6 +47,10 @@
         @include break-desk-big {
             color: $color-black-darken;
         }
+
+        @include break-mobile-small {
+            font-size: 28px;
+        }
     }
 
 

@@ -1,19 +1,51 @@
 .hotel-slider {
-    position: relative;
     padding: 0 0 100px;
 
-    &__bg {
-        width: 100%;
-        position: absolute;
-        top: -45px;
-        left: 0;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__head {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 0 10px;
+        
+        span {
+            color: $color-blue-darken;
+        }
 
         @include break-desk-big {
-            display: none;
+        }
+
+        @include break-mobile {
+            font-size: 24px;
+        }
+    
+        @include break-mobile-small {
+            font-size: 20px;
         }
     }
 
+    &__title {
+    
+        @include break-mobile-small {
+            font-size: 26px;
+        }
+    }
 
+    &__text {
+        font-size: 30px;
+        margin: 0 0 35px;
+
+        @include break-mobile {
+            font-size: 24px;
+        }
+    
+        @include break-mobile-small {
+            font-size: 20px;
+        }
+    }
 
     &__photo {
         width: 100%;
