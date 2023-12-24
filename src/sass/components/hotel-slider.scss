@@ -1,5 +1,6 @@
 .hotel-slider {
     position: relative;
+    padding: 0 0 100px;
 
     &__bg {
         width: 100%;
@@ -13,44 +14,33 @@
     }
 
 
-    &__inner {
-        padding: 90px 0;
+
+    &__photo {
+        width: 100%;
         position: relative;
-        z-index: 5;
+        margin: 0 0 20px
     }
 
-    &__head {
-        font-size: 25px;
-        font-weight: 700;
-        margin: 0 0 10px;
-        
-        span {
-            color: $color-blue-darken;
-        }
-
-        @include break-desk-big {
-        }
-
-        @include break-mobile {
-            font-size: 24px;
-        }
-    
-        @include break-mobile-small {
-            font-size: 20px;
-        }
+    &__icon {
+        position: absolute;
+        top: 200px;
+        z-index: 1000;
     }
 
     &__slider {
         @include fc_;
+        gap: 20px;
+
+        @include break-desk-big {
+            flex-direction: column;
+        }
     }
 
-    &__item {
-
-    }
 
     &__name {
         font-size: 25px;
         font-weight: 600;
+        margin: 0 0 10px;
 
         span {
             color: $color-blue-darken;

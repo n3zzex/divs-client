@@ -1,0 +1,75 @@
+.hotel-dinner {
+    padding: 0 0 100px;
+
+    &__head {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 0 10px;
+        
+        span {
+            color: $color-blue-darken;
+        }
+
+        @include break-desk-big {
+        }
+
+        @include break-mobile {
+            font-size: 24px;
+        }
+    
+        @include break-mobile-small {
+            font-size: 20px;
+        }
+    }
+
+    &__title {
+        margin: 0 0 20px;
+    }
+
+    &__text {
+        font-size: 30px;
+        font-weight: 500;
+        margin: 0 0 35px;
+
+        @include break-mobile {
+            font-size: 20px;
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        margin: 0 50px 0 0;
+
+        @include break-desk-big {
+            margin: 0 0 25px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+
+        @include break-desk-big {
+            flex-direction: column;
+        }
+    }
+
+    .dinner-list {
+
+        &__item {
+            display: flex;
+            align-items: flex-start;
+            
+            &:not(:last-child) {
+                margin: 0 0 25px;
+            }
+
+            img {
+                margin: 0 18px 0 0;
+            }
+        }
+
+        &__description {
+            line-height: 30px;
+        }
+    }
+}

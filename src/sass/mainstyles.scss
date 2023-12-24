@@ -179,6 +179,75 @@
     }
 }
 
+._button-orange {
+    @include fcc;
+    @include transition;
+
+    width: fit-content;
+    padding: 12px 34px;
+    text-align: center;
+    font-weight: 600;
+    font-size: $fz-small;
+    border-radius: $br-half-round;
+    color: #fff;
+    background-color: $color-orange-lighten;
+
+    cursor: pointer;
+
+    @include hover {
+        opacity: .7;
+    }
+    
+    @include break-desk-big {
+        width: 100%;
+    }
+
+    @include break-mobile {
+        font-size: $fz-main-mobile;
+    }
+
+    &.dark {
+        border-color: $color-white-main;
+        color: $color-white-main;
+    }
+}
+
+._button-no-fill-orange {
+    @include fcc;
+    @include transition;
+
+    width: fit-content;
+    padding: 16px 38px;
+    text-align: center;
+    font-weight: 600;
+    font-size: $fz-small;
+    border-radius: $br-half-round;
+    color: $color-black-main;
+    border: 1px solid $color-orange-lighten;
+    
+
+    cursor: pointer;
+
+    @include break-desk-big {
+        width: 100%;
+    }
+
+    @include hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $color-orange-lighten;
+    }
+
+    @include break-mobile {
+        font-size: $fz-main-mobile;
+    }
+
+    &.dark {
+        border-color: $color-white-main;
+        color: $color-white-main;
+    }
+}
+
 ._button-no-fill {
     @include fcc;
     @include transition;

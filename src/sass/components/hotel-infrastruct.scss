@@ -1,0 +1,53 @@
+.hotel-infrastruct {
+    position: relative;
+    padding: 0 0 100px;
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        top: -45px;
+        left: 0;
+        object-fit: scale-down;
+
+        @include break-desk-big {
+            display: none;
+        }
+    }
+
+    &__caption {
+        margin: 0 0 50px;
+    }
+
+    &__head {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 0 10px;
+        color: #fff;
+        
+        span {
+            color: $color-orange-lighten;
+        }
+
+        @include break-desk-big {
+            color: $color-black-darken;
+        }
+
+        @include break-mobile {
+            font-size: 24px;
+        }
+    
+        @include break-mobile-small {
+            font-size: 20px;
+        }
+    }
+
+    &__name {
+        color: #fff;
+
+        @include break-desk-big {
+            color: $color-black-darken;
+        }
+    }
+
+
+}
