@@ -1,8 +1,8 @@
 
-const mainArenaSlider = document.querySelector(".main-arena__slider");
+const mainArenaSlider = document.querySelector(".main-arena__slider .content");
 
 const mainSliderConfig = {
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 20,
   centerMode: true,
 
@@ -16,6 +16,12 @@ const mainSliderConfig = {
     nextEl: '.main-arena__next',
     prevEl: '.main-arena__prev',
   },
+
+  breakpoints: {
+    767: {
+      slidesPerView: 4,
+    }
+  }
   
 }
 

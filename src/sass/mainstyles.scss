@@ -414,14 +414,21 @@
     transition-property: transform, -webkit-transform;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-  }
-
-  .main-arena__slider {
-    position: relative;
-    padding: 40px;
 }
 
-    .main-arena__item {
+.main-arena {
+    &__slider {
+        position: relative;
+        padding: 40px;
+
+        .content {
+            position: relative;
+            overflow: hidden;
+        }
+
+    }
+
+    &__item {
 
         img {
             @include width-height(100%, 100%); 
@@ -429,55 +436,73 @@
         }
     }
 
-    .main-arena__prev,
-    .main-arena__next {
+    &__prev,
+    &__next {
         @include width-height(32px, 32px);
+        @include fcc;
         position: absolute;
-        top: 92px;
+        top: 50%;
+        transform: translateY(-50%);
         background-color: $color-purple-button;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border-radius: $br-rounded;
         object-fit: cover;
         z-index: 10;
     }
 
-    .main-arena__prev {
+    &__prev {
         left: 20px;
     }
 
-    .main-arena__next {
+    &__next {
         right: 20px;
     }
 
-    .question {
-        padding: 50px 85px;
-        background-color: #f1f1f1;
-        border: 1px dotted #1B3281;
-        margin: 0 0 60px;
+    &__pagination {
+        @include fcc;
+        margin: 50px 0 0 0;
 
-        @include break-mobile-small {
-            padding: 20px
+        .swiper-pagination-bullet {
+            @include width-height(19px, 19px);
+            border: 2px solid rgba(228, 5, 113, 1);
+            background-color: #fff;
+
+            &-active {
+                background-color: rgba(228, 5, 113, 1);
+            }
+
         }
 
-        &__info {
-            @include fc_;
+    }
 
-            img {
-                margin: 0 80px 0 0;
+}
 
-                @include break-mobile {
-                    display: none;
-                }
+.question {
+    padding: 50px 85px;
+    background-color: #f1f1f1;
+    border: 1px dotted #1B3281;
+    margin: 0 0 60px;
+
+    @include break-mobile-small {
+        padding: 20px
+    }
+
+    &__info {
+        @include fc_;
+
+        img {
+            margin: 0 80px 0 0;
+
+            @include break-mobile {
+                display: none;
             }
+        }
 
-            a {
-                color: $color-purple-button;
-                text-decoration: underline;
-            }
+        a {
+            color: $color-purple-button;
+            text-decoration: underline;
         }
     }
+}
 
 .breadcrumbs {
     @include fc_;

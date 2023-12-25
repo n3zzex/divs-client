@@ -32,12 +32,11 @@
             .main-arena__prev,
             .main-arena__next {
                 @include width-height(32px, 32px);
+                @include fcc;
                 position: absolute;
-                top: 92px;
+                top: 50%;
+                transform: translateY(-50%);
                 background-color: $color-purple-button;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 border-radius: $br-rounded;
                 object-fit: cover;
                 z-index: 10;
