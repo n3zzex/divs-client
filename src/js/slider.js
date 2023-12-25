@@ -1,6 +1,7 @@
 
 const mainArenaSlider = document.querySelector(".main-arena__slider .content");
 
+
 const mainSliderConfig = {
   slidesPerView: 1,
   spaceBetween: 20,

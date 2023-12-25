@@ -39,42 +39,6 @@
         }
     }
 
-    .main-arena__slider {
-        position: relative;
-        background-color: #f1f1f1;
-        padding: 40px;
-
-
-        .main-arena__item {
-
-            img {
-                @include width-height(100%, 100%); 
-                object-fit: cover;
-            }
-        }
-
-        .main-arena__prev,
-        .main-arena__next {
-            @include width-height(32px, 32px);
-            @include fcc;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: $color-purple-button;
-            border-radius: $br-rounded;
-            object-fit: cover;
-            z-index: 10;
-        }
-
-        .main-arena__prev {
-            left: 20px;
-        }
-
-        .main-arena__next {
-            right: 20px;
-        }
-    }
-
     &__info {
         align-items: flex-end;
         @include break-desk-big {

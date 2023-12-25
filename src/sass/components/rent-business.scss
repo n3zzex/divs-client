@@ -4,13 +4,9 @@
     overflow: hidden;
 
     &__bg {
-        width: 100%;
         position: absolute;
         top: 0;
 
-        @include break-desk-big {
-            display: none;
-        }
     }
 
     &__head {
