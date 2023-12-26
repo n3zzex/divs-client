@@ -5,12 +5,25 @@
     &__bg {
         width: 100%;
         position: absolute;
-        top: -490px;
+        top: -420px;
         left: 0;
         object-fit: scale-down;
 
         @include break-desk-big {
             display: none;
+        }
+    }
+
+    &__photo {
+        img {
+            width: 609px;
+            height: 478px;
+
+            @include break-desk-big {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 
