@@ -2,6 +2,28 @@
     position: relative;
     padding: 0 0 110px;
 
+    ._container {
+        overflow: hidden;
+    }
+
+    .main-arena__prev {
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 0 0 -630px;
+        @include break-desk-big {
+            display: none;
+        }
+    }
+
+    .main-arena__next {
+        right: 50%;
+        transform: translateX(50%);
+        margin: 0 -630px 0 0;
+        @include break-desk-big {
+            display: none;
+        }
+    }
+
     &__bg {
         width: 100%;
         position: absolute;
@@ -74,12 +96,6 @@
         @include fc_;
         position: relative;
         z-index: 3;
-        gap: 50px;
-
-        @include break-mobile {
-            flex-direction: column;
-            gap: 20px;
-        }
 
         &__item {
             display: flex;

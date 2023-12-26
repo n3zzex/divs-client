@@ -1,6 +1,28 @@
 .news {
     position: relative;
 
+    ._container {
+        overflow: hidden;
+    }
+
+    .main-arena__prev {
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 0 0 -630px;
+        @include break-desk-big {
+            display: none;
+        }
+    }
+
+    .main-arena__next {
+        right: 50%;
+        transform: translateX(50%);
+        margin: 0 -630px 0 0;
+        @include break-desk-big {
+            display: none;
+        }
+    }
+
     &__bg {
         width: 100%;
         position: absolute;
@@ -87,11 +109,6 @@
             display: flex;
             position: relative;
             z-index: 3;
-            gap: 34px;
-
-            @include break-desk-big {
-                flex-direction: column;
-            }
 
             &__item {
                 display: flex;
