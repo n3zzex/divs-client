@@ -341,7 +341,7 @@ new Swiper('.concert-slider', {
 
 
 new Swiper('.reviews__slider', {
-  slidesPerView: 2,
+  slidesPerView: 1,
   loop: true,
   spaceBetween: 20,
 
@@ -355,6 +355,12 @@ new Swiper('.reviews__slider', {
     type: "bullets",
     clickable: true,
   },
+
+  breakpoints: {
+    1024: {
+      slidesPerView: 2
+    }
+  }
   
 });
 
