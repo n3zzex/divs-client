@@ -416,26 +416,16 @@
     box-sizing: content-box;
 }
 
-.main-arena {
-    &__slider {
-        position: relative;
-        padding: 40px;
-
-        .content {
-            position: relative;
-            overflow: hidden;
-        }
-
-    }
-
-    &__item {
-
-        img {
-            @include width-height(100%, 100%); 
-            object-fit: cover;
-        }
-    }
-
+.main-arena,
+.gyms-dance,
+.gyms-workout, 
+.gyms-physical,
+.rent-press,
+.rent-vip,
+.rent-arena,
+.rent-floor,
+.rent-area {
+    
     &__prev,
     &__next {
         @include width-height(32px, 32px);
@@ -447,6 +437,11 @@
         border-radius: $br-rounded;
         object-fit: cover;
         z-index: 10;
+
+        @include break-mobile {
+            display: none;
+        }
+
     }
 
     &__prev {
@@ -473,6 +468,36 @@
         }
 
     }
+
+    &__slider {
+    
+        position: relative;
+        padding: 40px;
+
+        @include break-mobile {
+            padding: 20px;
+        }
+    
+        .content {
+            position: relative;
+            overflow: hidden;
+        }
+        
+    }
+
+}
+
+.main-arena {
+
+    &__item {
+
+        img {
+            @include width-height(100%, 100%); 
+            object-fit: cover;
+        }
+    }
+
+
 
 }
 

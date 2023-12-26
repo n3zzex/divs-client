@@ -61,10 +61,40 @@
 
     &__slider {
         @include fc_;
-        gap: 20px;
 
-        @include break-desk-big {
-            flex-direction: column;
+        overflow: hidden;
+
+        &-wrapper {
+            @include fcc;
+            gap: 10px;
+        }
+
+    }
+
+    &-prev,
+    &-next {
+        @include fixed-width-height(42px, 42px);
+        @include fcc;
+        border: 1px solid rgba(168, 135, 113, 1);
+        border-radius: 50%;
+
+        @include break-mobile {
+            display: none;
+        }
+
+    }
+
+    .hotel-page-slider-pagination {
+        @include fcc;
+        margin: 50px 0 0 0;
+        .swiper-pagination-bullet {
+            @include width-height(19px, 19px);
+            border: 1px solid rgba(168, 135, 113, 1);
+
+            &-active {
+                background-color: rgba(168, 135, 113, 1);
+            }
+
         }
     }
 
@@ -79,3 +109,4 @@
         }
     }
 }
+

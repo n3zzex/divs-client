@@ -1,6 +1,8 @@
 .fitness-reviews {
     padding: 0 0 100px;
 
+    overflow: hidden;
+
     &__head {
         margin: 0 0 25px;
     }
@@ -17,6 +19,11 @@
     &__prev, &__next {
         position: absolute;
         top: 176px;
+    }
+
+    .reviews {
+        position: relative;
+        overflow: hidden;
     }
 
     .reviews-item {
