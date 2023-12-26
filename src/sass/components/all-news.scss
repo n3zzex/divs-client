@@ -3,9 +3,17 @@
     position: relative;
     overflow: hidden;
 
+    @include break-desk-big {
+        padding: 70px 0 110px;
+    }
+
     &__bg {
         position: absolute;
         top: 0;
+
+        @include break-desk-big {
+            display: none;
+        }
     }
 
     &__box {
@@ -15,15 +23,33 @@
         top: 40px;
         font-weight: 600;
 
+        @include break-desk-big {
+            position: unset;
+            flex-direction: column;
+            align-items: normal;
+        }
+
         .box-text {
             font-size: 20px;
             color: #fff;
-            margin: 0 50px 0 0
+            margin: 0 50px 0 0;
+
+            @include break-desk-big {
+                color: $color-black-darken;
+                margin: 0 0 15px
+            }
         }
     }
 
     &__form {
         @include fc_;
+
+        @include break-desk-big {
+            width: 100%;
+            flex-direction: column;
+            margin: 0 0 50px;
+        }
+
         input {
             padding: 20px 0 20px 30px;
             margin: 0 16px 0 0;
@@ -32,6 +58,14 @@
             border-radius: $br-half-round;
             background-color: #fff;
             outline: none;
+
+            @include break-desk-big {
+                width: 100%;
+                margin: 0 0 16px;
+                border: 1px solid $color-black-darken;
+                outline: 1px solid $color-black-darken;
+            }
+    
         }
     }
 

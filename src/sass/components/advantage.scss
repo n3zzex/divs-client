@@ -3,9 +3,17 @@
     position: relative;
     overflow: hidden;
 
+    @include break-desk-big {
+        padding: 70px 0 80px;
+    }
+
     &__bg {
         position: absolute;
         top: 0;
+
+        @include break-desk-big {
+            display: none;
+        }
     }
 
     &__form {
@@ -16,7 +24,11 @@
     }
 
     &__form {
-        
+        @include break-desk-big {
+            position: unset;
+            margin: 0 0 50px;
+            flex-direction: column;
+        }
         input {
             width: 275px;
             border-radius: $br-half-round;
@@ -25,6 +37,12 @@
             background-color: #fff;
             outline: none;
             margin: 0 16px 0 0;
+
+            @include break-desk-big {
+                width: 100%;
+                border: 1px solid $color-black-darken;
+                margin: 0 0 16px;
+            }
         }
     }
 
@@ -33,15 +51,27 @@
         margin: 0 18px 0 0;
         font-size: 12px;
         color: #fff;
+        cursor: pointer;
 
         img {
             margin: 0 5px 0 0;
+        }
+
+        @include break-desk-big {
+            margin: 0 0 16px;
+            color: $color-black-darken;
+            white-space: nowrap;
         }
     }
 
     &__button {
         padding: 18px 46px;
         font-size: 17px;
+
+        @include break-desk-big {
+            width: 100%;
+            padding: 18px 100px;
+        }
     }
 
     &__inner {
