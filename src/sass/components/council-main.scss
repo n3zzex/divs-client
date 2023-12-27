@@ -19,6 +19,10 @@
         @include break-mobile {
             font-size: 32px
         }
+
+        @include break-mobile-small {
+            font-size: 24px
+        }
     }
 
     .council-main-category {
