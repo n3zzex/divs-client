@@ -22,7 +22,7 @@
         padding: 230px 0 80px;
 
         @include break-desk-big {
-            padding: 110px 0 80px;
+            padding: 217px 0 80px;
         }
 
 
@@ -37,10 +37,6 @@
             .footer-black-info__description {
                 color: $color-orange-lighten;
             }
-
-            @include break-mobile {
-                text-align: left
-            }
         }
         .footer-policy {
             @include fcc;
@@ -48,7 +44,6 @@
 
             @include break-mobile {
                 flex-direction: column;
-                align-items: normal;
             }
 
             &__item {
@@ -89,7 +84,6 @@
         }
 
         @include break-mobile-small {
-            grid-template-columns: 1fr;
             gap: 20px;
         }
 

@@ -1,7 +1,7 @@
 .rooms {
 
     &__inner {
-        padding: 70px 0 115px;
+        padding: 0 0 115px;
 
         .rooms__head {
             font-size: 25px;
@@ -13,12 +13,16 @@
                 color: $color-orange-main;
             }
 
+            @include break-desk-big {
+                text-align: center;
+            }
+
             @include break-mobile {
                 font-size: 24px;
             }
         
             @include break-mobile-small {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
         .rooms__caption {
@@ -27,8 +31,9 @@
 
             @include break-desk-big {
                 flex-direction: column;
-                align-items: normal;
             }
+
+            
 
             .rooms-name {
                 font-size: 55px;
@@ -42,10 +47,11 @@
                 @include break-mobile {
                     width: 100%;
                     font-size: 40px;
+                    text-align: center;
                 }
             
                 @include break-mobile-small {
-                    font-size: 32px;
+                    font-size: 30px;
                 }
             }
 
@@ -53,10 +59,6 @@
                 display: flex;
                 padding: 16px 38px;
                 white-space: nowrap;
-
-                @include break-desk-big {
-                    width: 100%;
-                }
             }
         }
 
@@ -72,6 +74,7 @@
             &__item {
                 display: flex; 
                 flex-direction: column;
+
                 .rooms-list__image {
                     width: 100%;
                     margin: 0 0 18px;
@@ -79,16 +82,15 @@
 
                 .rooms-list__title {
                     margin: 0 0 32px;
+                    font-size: 20px;
+
+                    @include break-mobile {
+                        margin: 0 0 20px;
+                    }
                 }
                 
                 .rooms-list__button {
                     margin-top: auto;
-
-
-                    @include break-desk-big {
-                        width: 100%;
-                    }
-
                 }
             }
         }

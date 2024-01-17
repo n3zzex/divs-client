@@ -36,6 +36,10 @@
         span {
             color: $color-orange-main;
         }
+
+        @include break-mobile-small {
+            font-size: 30px
+        }
     }
 
     .facts-category {

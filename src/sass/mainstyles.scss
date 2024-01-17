@@ -173,6 +173,11 @@
         font-size: $fz-main-mobile;
     }
 
+    @include break-mobile-small {
+        font-size: 12px;
+        padding: 12px 38px;
+    }
+
     &.dark {
         border-color: $color-white-main;
         color: $color-white-main;
@@ -204,6 +209,10 @@
 
     @include break-mobile {
         font-size: $fz-main-mobile;
+    }
+
+    @include break-mobile-small {
+        font-size: 12px;
     }
 
     &.dark {
@@ -242,6 +251,10 @@
         font-size: $fz-main-mobile;
     }
 
+    @include break-mobile-small {
+        font-size: 12px;
+    }
+
     &.dark {
         border-color: $color-white-main;
         color: $color-white-main;
@@ -274,6 +287,10 @@
         font-size: $fz-main-mobile;
     }
 
+    @include break-mobile-small {
+        font-size: 12px;
+    }
+
     &.dark {
         border-color: $color-white-main;
         color: $color-white-main;
@@ -291,7 +308,7 @@
     }
 
     @include break-mobile-small {
-        font-size: 32px;
+        font-size: 30px;
     }
 }
 
@@ -310,7 +327,7 @@
     }
 
     @include break-mobile-small {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -534,6 +551,11 @@
     @include fc_;
     margin: 0 0 20px;
     font-weight: 600;
+
+    @include break-mobile {
+        font-weight: 500;
+        font-size: 18px;
+    }
 }
 
 .breadcrumbs__item:not(:last-child) {
@@ -575,15 +597,11 @@
 
         .gyms-list__title {
             margin: 0 0 20px;
+            font-size: 20px;
         }
         
         .gyms-list__button {
             margin-top: auto;
-
-            @include break-desk-big {
-                width: 100%;
-            }
-
         }
     }
 }

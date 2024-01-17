@@ -2,6 +2,10 @@
     position: relative;
     padding: 0 0 110px;
 
+    @include break-desk-big {
+        padding: 0 0 70px;
+    }
+
     ._container {
         overflow: hidden;
     }
@@ -56,6 +60,10 @@
         @include break-desk {
             color: $color-black-darken;
         }
+
+        @include break-mobile-small {
+            font-size: 18px;
+        }
     }
 
     &__caption {
@@ -88,7 +96,7 @@
         }
 
         @include break-mobile {
-            font-size: 32px;
+            font-size: 30px;
         }
     }
 

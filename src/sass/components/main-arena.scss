@@ -1,5 +1,6 @@
 .main-arena {
     position: relative;
+    padding: 0 0 70px;
 
     &__bg {
         position: absolute;
@@ -12,6 +13,7 @@
             display: none;
         }
     }
+
 
     &__inner {
         padding: 120px 0 0;
@@ -110,7 +112,7 @@
             }
         
             @include break-mobile-small {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
 
@@ -125,7 +127,7 @@
             }
         
             @include break-mobile-small {
-                font-size: 32px;
+                font-size: 30px;
             }
         }
 
@@ -141,8 +143,10 @@
             display: flex;
             align-items: flex-start;
 
-            @include break-mobile {
-                flex-direction: column;
+            @include break-desk {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
             }
 
             &__item {
@@ -175,10 +179,6 @@
         .main-arena__button {
             display: flex;
             padding: 16px 38px !important;
-
-            @include break-desk-big {
-                width: 100%;
-            }
         }
     }
 }

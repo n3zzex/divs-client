@@ -24,14 +24,18 @@
 
         @include break-desk {
             top: -35px;
-            font-size: 25px;
             left: 0;
             color: $color-black-darken;
+        }
+
+        @include break-mobile-small {
+            font-size: 20px;
         }
     }
 
     &__text {
         margin: 0 0 30px;
+        font-size: 16px;
     
 
         span {
@@ -59,12 +63,20 @@
                 padding: 40px 50px;
                 border-radius: 10px;
                 background-color: #f1f1f1;
+
+                @include break-mobile {
+                    padding: 20px 25px;
+                }
             }
 
             &__name {
                 font-size: $br-second-main;
                 font-weight: 600;
                 margin: 0 0 20px;
+
+                @include break-mobile-small {
+                    font-size: 20px;
+                }
             }
 
             img {
@@ -75,6 +87,7 @@
 
             &__item {
                 @include fc_;
+                font-size: 16px;
                 
                 img {
                     width: 21px;

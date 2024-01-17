@@ -6,6 +6,10 @@
 
     height: 727px;
 
+    @include break-mobile-small {
+        height: 500px;
+    }
+
     &__bg {
         position: absolute;
         top: 0;
@@ -31,10 +35,9 @@
         z-index: 10;
         top: 50%;
 
-        @include break-desk-big {
-            display: none;
+        @include break-mobile-small {
+            top: 85%;
         }
-
     }
 
     &__prev {
@@ -42,7 +45,17 @@
         transform: translate(-50%, -50%);
         margin-left: -630px;
         @include break-desk-big {
-            margin-left: -530px;
+            display: none;
+        }
+
+        @include break-mobile-small {
+            display: block;
+            margin-left: -130px;
+
+            img {
+                width: 43px;
+                height: 43px;
+            }
         }
     }
 
@@ -50,8 +63,19 @@
         right: 50%;
         transform: translate(50%, -50%);
         margin-right: -630px;
+
         @include break-desk-big {
-            margin-right: -530px;
+            display: none;
+        }
+
+        @include break-mobile-small {
+            display: block;
+            margin-right: -130px;
+
+            img {
+                width: 43px;
+                height: 43px;
+            }
         }
     }
 
@@ -78,27 +102,44 @@
 
         .concert__date {
             font-weight: 500;
-            font-size: $fz-medium;
             margin: 0 0 10px;
+
+            @include break-mobile-small {
+                font-size: 20px;
+            }
         }
 
         .concert__title {
             font-weight: 700;
-            font-size: $fz-big;
+            font-size: 60px;
             margin: 0 0 10px;
+ 
+            @include break-mobile-small {
+                width: 320px;
+                font-size: 30px;
+            }
         }
 
         .concert__description {
             font-weight: 500;
-            font-size: $fz-medium;
+            font-size: 30px;
             max-width: 636px;
             margin: 0 0 35px;
+
+            @include break-mobile-small {
+                font-size: 20px;
+            }
         }
 
         .concert__button {
             display: flex;
             padding: 22px 38px !important;
             font-size: $fz-main;
+
+            @include break-mobile-small {
+                padding: 18px 44px !important;
+                white-space: nowrap;
+            }
         }
     }
 
@@ -114,6 +155,7 @@
 
         @include break-desk-big {
             overflow: auto;
+            display: none;
         }
 
         @include break-desk {

@@ -1,5 +1,11 @@
 .news {
     position: relative;
+    padding: 0 0 110px;
+
+    @include break-desk{
+        padding: 0 0 60px;
+    }
+
 
     ._container {
         overflow: hidden;
@@ -36,7 +42,6 @@
 
 
     &__inner {
-        padding: 90px 0 110px;
         .news__head {
             font-size: 25px;
             font-weight: 800;
@@ -60,7 +65,7 @@
             }
         
             @include break-mobile-small {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
 
@@ -73,6 +78,10 @@
             @include break-desk-big {
                 flex-direction: column;
                 align-items: normal;
+            }
+
+            @include break-mobile-small {
+                margin: 0 0 40px;
             }
 
             .news-name {
@@ -90,7 +99,7 @@
                 }
             
                 @include break-mobile-small {
-                    font-size: 32px;
+                    font-size: 30px;
                 }
             }
 
@@ -98,10 +107,6 @@
                 display: flex;
                 padding: 16px 26px;
                 white-space: nowrap;
-
-                @include break-desk-big {
-                    width: 100%;
-                }
             }
         }
 
@@ -137,10 +142,6 @@
                 .slider__button {
                     padding: 16px 38px !important;
                     margin-top: auto;
-
-                    @include break-desk-big {
-                        width: 100%;
-                    }
                 }
             }
         }

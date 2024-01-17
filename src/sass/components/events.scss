@@ -12,12 +12,16 @@
                 color: $color-orange-main;
             }
 
+            @include break-desk-big {
+                text-align: center;
+            }
+
             @include break-mobile {
                 font-size: 24px;
             }
         
             @include break-mobile-small {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
 
@@ -27,7 +31,6 @@
 
             @include break-desk-big {
                 flex-direction: column;
-                align-items: normal;
             }
 
             .events__name {
@@ -38,12 +41,13 @@
                 }
 
                 @include break-mobile {
+                    text-align: center;
                     width: 100%;
                     font-size: 40px;
                 }
             
                 @include break-mobile-small {
-                    font-size: 32px;
+                    font-size: 30px;
                 }
             }
 
@@ -51,10 +55,6 @@
                 display: flex;
                 padding: 16px 29px;
                 white-space: nowrap;
-
-                @include break-desk-big {
-                    width: 100%;
-                }
             }
         }
 
@@ -104,11 +104,6 @@
                 &__button {
                     padding: 16px 38px !important;
                     margin-top: auto;
-
-                    @include break-desk-big {
-                        width: 100%;
-                    }
-
                 }
             }
 

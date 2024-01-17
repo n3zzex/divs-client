@@ -6,7 +6,7 @@
         min-height: 130px;
 
         @include break-desk-big {
-            min-height: 150px;
+            min-height: 100px;
             justify-content: center;
         }
 
@@ -17,10 +17,9 @@
                 margin: 0 25px 0 0;
             }
 
-            @include break-desk {
-                display: none;
+            img {
+                width: 100%;
             }
-
         }
     }
 
@@ -45,8 +44,6 @@
                 height: 1px;
                 bottom: -10px;
                 background-color: rgba(117, 117, 117, 0.6);
-
-
             }
 
             &__list {
@@ -56,9 +53,15 @@
                     flex-wrap: wrap;
                 }
 
-                
                 @include break-desk {
                     flex-direction: column;
+                }
+
+                .menu__item-address {
+
+                    @include break-mobile {
+                        display: none;
+                    }
                 }
 
                 .menu__item {
@@ -87,10 +90,11 @@
                 &__link {
                     white-space: nowrap;
                     margin: 0 25px 0 0;
-
                 }
             }
         }
+
+
 
         .nav {
             @include fcb;
@@ -116,9 +120,9 @@
                 @include fc_;
 
                 @include break-desk {
+                    display: none;
                     flex-direction: column;
                 }
-    
             }
 
             &__item {
@@ -138,7 +142,6 @@
                         pointer-events: all;
                     }
                 }
-
             }
 
             &__link {
@@ -158,7 +161,7 @@
 
                 &:hover {
                     opacity: 1;
-                    pointer-events: all
+                    pointer-events: all;
                 }
 
                 li {
@@ -179,10 +182,10 @@
             .user-actions {
                 @include fc_;
                 gap: 0 30px;
-        
+
                 &__language {
                     @include fc_;
-        
+
                     .user-actions__button {
                         font-weight: 500;
                         font-size: $fz-main;
