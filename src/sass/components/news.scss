@@ -2,6 +2,8 @@
     position: relative;
     padding: 0 0 110px;
 
+    background-color: #F1F1F1;
+
     @include break-desk{
         padding: 0 0 60px;
     }
@@ -16,7 +18,9 @@
         transform: translateX(-50%);
         margin: 0 0 0 -630px;
         @include break-desk-big {
-            display: none;
+            margin: 0;
+            left: 20px;
+            transform: translate(0);
         }
     }
 
@@ -25,7 +29,9 @@
         transform: translateX(50%);
         margin: 0 -630px 0 0;
         @include break-desk-big {
-            display: none;
+            margin: 0;
+            right: 20px;
+            transform: translate(0);
         }
     }
 
@@ -36,7 +42,10 @@
         left: 0;
 
         @include break-desk-big {
-            display: none;
+            top: -110px;
+            height: 300px;
+            object-fit: cover;
+            object-position: right;
         }
     }
 
@@ -56,17 +65,15 @@
                 color: $color-orange-main;
             }
 
-            @include break-desk-big {
-                color: $color-black-darken;
-            }
-
             @include break-mobile {
-                font-size: 24px;
-            }
-        
-            @include break-mobile-small {
                 font-size: 18px;
             }
+
+            @include break-mobile-small {
+                font-size: 15px;
+            }
+
+    
         }
 
         .news__caption {
@@ -90,17 +97,20 @@
                 color: #fff;
 
                 @include break-desk-big {
-                    color: $color-black-darken;
-                    margin: 0 0 20px;
+                    margin-bottom: 20px;
+
                 }
 
                 @include break-mobile {
-                    font-size: 40px;
-                }
-            
-                @include break-mobile-small {
                     font-size: 30px;
+                    width: 215px;
+                    margin-bottom: 12px;
                 }
+
+                @include break-mobile-small {
+                    font-size: 22px;
+                }
+        
             }
 
             .news__button {

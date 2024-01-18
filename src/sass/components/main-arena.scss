@@ -2,6 +2,12 @@
     position: relative;
     padding: 0 0 70px;
 
+    ._container {
+        @include break-mobile {
+            padding: 0 !important;
+        }
+    }
+
     &__bg {
         position: absolute;
         top: 0;
@@ -14,9 +20,22 @@
         }
     }
 
+    &__box,
+    &__head,
+    &__title {
+        @include break-mobile {
+            padding: 0 20px;
+        }
+    }
+
 
     &__inner {
         padding: 120px 0 0;
+
+        @include break-desk {
+            padding: 40px 0 0 0;
+        }
+
         .main-arena__slider {
             position: relative;
             background-color: #f1f1f1;
@@ -71,6 +90,28 @@
         width: 100%;
         position: relative;
 
+        svg {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        @include break-mobile {
+            position: relative;
+            padding: 30px !important;
+
+            a {
+                position: relative;
+                z-index: 5;
+            }
+
+            svg {
+                display: block;
+            }
+
+        }
+
         &__play {
             position: absolute;
             width: 80px;
@@ -123,11 +164,11 @@
 
             @include break-mobile {
                 width: 100%;
-                font-size: 40px;
+                font-size: 30px;
             }
         
             @include break-mobile-small {
-                font-size: 30px;
+                font-size: 22px;
             }
         }
 

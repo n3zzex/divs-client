@@ -15,7 +15,7 @@
         transform: translateX(-50%);
         margin: 0 0 0 -630px;
         @include break-desk-big {
-            display: none;
+            margin: 0 0 0 -100px;
         }
     }
 
@@ -24,7 +24,7 @@
         transform: translateX(50%);
         margin: 0 -630px 0 0;
         @include break-desk-big {
-            display: none;
+            margin: 0 -100px 0 0;
         }
     }
 

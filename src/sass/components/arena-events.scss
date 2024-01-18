@@ -21,6 +21,7 @@
         }
 
         .video-player {
+            position: relative;
             margin: 0 40px 0 0;
 
             @include break-desk-big {

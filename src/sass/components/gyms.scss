@@ -8,7 +8,10 @@
         left: 0;
 
         @include break-desk-big {
-            display: none;
+            object-fit: cover;
+            object-position: left;
+            height: 270px;
+            top: 40px;
         }
     }
 
@@ -27,16 +30,14 @@
                 color: $color-orange-main;
             }
 
-            @include break-desk-big {
-                color: $color-black-darken;
-            }
-
             @include break-mobile {
-                font-size: 24px;
+                font-size: 18px;
+                width: 175px;
+                text-align: right;
             }
         
             @include break-mobile-small {
-                font-size: 18px;
+                font-size: 15px;
             }
         }
 
@@ -56,7 +57,7 @@
                 align-items: flex-end;
 
                 @include break-desk-big {
-                    margin: 0 0 20px;
+                    margin: 0 0 12px;
                 }
             }
 
@@ -65,17 +66,10 @@
                 font-weight: 700;
                 color: #fff;
 
-                @include break-desk-big {
-                    color: $color-black-darken;
-                }
-
                 @include break-mobile {
-                    width: 100%;
-                    font-size: 40px;
-                }
-            
-                @include break-mobile-small {
+                    width: 187px;
                     font-size: 30px;
+                    text-align: right;
                 }
             }
 

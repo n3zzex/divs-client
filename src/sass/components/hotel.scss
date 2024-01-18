@@ -161,10 +161,20 @@
         border: 1px solid rgba(168, 135, 113, 1);
         border-radius: 50%;
 
-        @include break-mobile {
-            display: none;
+        @include break-desk-big {
+            @include fixed-width-height(42px, 42px);
+            position: absolute;
+            bottom: -10px;
         }
 
+    }
+
+    &-prev {
+        left: 0;
+    }
+
+    &-next {
+        right: 0;
     }
 
     .hotel-slider-pagination {

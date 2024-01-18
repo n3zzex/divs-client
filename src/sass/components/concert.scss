@@ -11,15 +11,19 @@
     }
 
     &__bg {
+        @include width-height(100%, 100%);
         position: absolute;
         top: 0;
         left: 0;
+        img {
+            @include width-height(100%, 100%);
+            object-fit: cover;
+        }
     }
 
     &-slider {
+        @include width-height(100%, 100%);
         overflow: hidden;
-        width: 100%;
-        height: 100%;
     }
 
     &__next {
@@ -35,8 +39,9 @@
         z-index: 10;
         top: 50%;
 
-        @include break-mobile-small {
-            top: 85%;
+        @include break-desk-big {
+            bottom: 25px;
+            top: unset;
         }
     }
 
@@ -44,17 +49,14 @@
         left: 50%;
         transform: translate(-50%, -50%);
         margin-left: -630px;
-        @include break-desk-big {
-            display: none;
-        }
 
-        @include break-mobile-small {
+        @include break-desk-big {
             display: block;
-            margin-left: -130px;
+            margin-left: 0;
+            left: 45px;
 
             img {
-                width: 43px;
-                height: 43px;
+                @include width-height(43px, 43px);
             }
         }
     }
@@ -65,16 +67,12 @@
         margin-right: -630px;
 
         @include break-desk-big {
-            display: none;
-        }
-
-        @include break-mobile-small {
             display: block;
-            margin-right: -130px;
+            margin-right: 0;
+            right: 45px;
 
             img {
-                width: 43px;
-                height: 43px;
+                @include width-height(43px, 43px);
             }
         }
     }
@@ -158,9 +156,17 @@
             display: none;
         }
 
-        @include break-desk {
-            transform: unset;
-            position: static;
+        &-mobile {
+            @include break-desk-big {
+                display: grid !important;
+            }
+        }
+
+        @include break-desk-big {
+            overflow: hidden;
+            position: static !important;
+            padding: 0 !important;
+            transform: translate(0) !important;
         }
 
         .concert-category__item {
@@ -196,6 +202,10 @@
                 white-space: nowrap;
                 opacity: 0;
 
+                @include break-desk {
+                    display: none;
+                }
+
                 &__button {
                     font-size: 12px;
                     padding: 13px 40px;
@@ -223,6 +233,7 @@
 
                 @include break-desk-big {
                     margin: 0;
+                    width: 100%;
                 }
 
             }
@@ -238,6 +249,12 @@
                 @include break-desk-big {
                     color: $color-black-darken;
                 }
+
+                @include break-desk {
+                    font-size: 16px;
+                    margin-top: 10px;
+                }
+
             }
         }
     }

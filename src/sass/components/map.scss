@@ -21,13 +21,26 @@
         bottom: -150px;
         z-index: 5000;
 
-        h1 {
+        @include break-desk-big {
+            padding: 20px;
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 20px;
+        }
+
+        h2 {
             font-weight: 700;
             font-size: 55px;
             margin: 0 0 30px;
+            text-align: center;
 
             @include break-desk-big {
                 font-size: 40px;
+            }
+
+            @include break-mobile {
+                font-size: 30px;
             }
 
             span {

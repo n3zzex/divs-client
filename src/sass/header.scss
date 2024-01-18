@@ -1,6 +1,30 @@
 @import "./usable/vendor.scss";
 
 .header {
+
+    &__logo {
+        margin: 0 50px 0 0;
+
+        @include break-desk-big {
+            margin: 0;
+            display: none;
+        }
+
+        &-mobile {
+            @include fixed-width(66px);
+            display: none;
+
+            @include break-desk-big {
+                display: block;
+            }
+
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
     &__inner {
         @include fc_;
         min-height: 130px;
@@ -9,18 +33,6 @@
             min-height: 100px;
             justify-content: center;
         }
-
-        .header__logo {
-            margin: 0 50px 0 0;
-
-            @include break-desk-big {
-                margin: 0 25px 0 0;
-            }
-
-            img {
-                width: 100%;
-            }
-        }
     }
 
     &__item {
@@ -28,73 +40,10 @@
     }
 
     &__contacts {
-        .menu {
-            position: relative;
-            @include fcb;
-            margin: 0 0 20px;
 
-            @include break-desk {
-                flex-direction: column-reverse;
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 1px;
-                bottom: -10px;
-                background-color: rgba(117, 117, 117, 0.6);
-            }
-
-            &__list {
-                @include fc_;
-
-                @include break-desk-big {
-                    flex-wrap: wrap;
-                }
-
-                @include break-desk {
-                    flex-direction: column;
-                }
-
-                .menu__item-address {
-
-                    @include break-mobile {
-                        display: none;
-                    }
-                }
-
-                .menu__item {
-                    @include fc_;
-                    padding: 8px 16px;
-                    cursor: pointer;
-
-                    .menu__link {
-                        margin: 0 0 0 8px;
-                        white-space: nowrap;
-
-                        &:not(:last-child) {
-                            margin: 0 8px 0 0;
-                        }
-
-                        @include break-mobile {
-                            white-space: normal;
-                        }
-                    }
-                }
-            }
-
-            .contact {
-                @include fc_;
-
-                &__link {
-                    white-space: nowrap;
-                    margin: 0 25px 0 0;
-                }
-            }
+        @include break-desk-big {
+            width: 100%;
         }
-
-
 
         .nav {
             @include fcb;
@@ -119,9 +68,8 @@
             &__list {
                 @include fc_;
 
-                @include break-desk {
+                @include break-desk-big {
                     display: none;
-                    flex-direction: column;
                 }
             }
 
@@ -166,11 +114,15 @@
 
                 li {
                     @include transition;
-                    padding: 10px 15px;
                     font-size: 14px;
                     font-weight: 500;
                     white-space: nowrap;
                     background-color: #fff;
+
+                    a {
+                        display: block;
+                        padding: 10px 15px;
+                    }
 
                     &:hover {
                         background-color: #1b3281;
@@ -200,4 +152,243 @@
     .contact-black__button {
         background-color: $color-orange-lighten;
     }
+}
+
+.menu {
+    position: relative;
+    @include fcb;
+    margin: 0 0 20px;
+
+    @include break-desk {
+        flex-direction: column-reverse;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -10px;
+        background-color: rgba(117, 117, 117, 0.6);
+    }
+
+    &__list {
+        @include fc_;
+
+        @include break-desk-big {
+            flex-wrap: wrap;
+            display: none;
+        }
+
+        @include break-desk {
+            flex-direction: column;
+        }
+
+        .menu__item-address {
+
+            @include break-mobile {
+                display: none;
+            }
+        }
+
+        .menu__item {
+            @include fc_;
+            padding: 8px 16px;
+            cursor: pointer;
+
+            .menu__link {
+                margin: 0 0 0 8px;
+                white-space: nowrap;
+
+                &:not(:last-child) {
+                    margin: 0 8px 0 0;
+                }
+
+                @include break-mobile {
+                    white-space: normal;
+                }
+            }
+        }
+    }
+
+    .contact {
+        @include fc_;
+
+        
+        &__col {
+            display: none;
+        }
+
+        @include break-desk-big {
+            gap: 10px;
+            width: 100%;
+            justify-content: space-between;
+
+            
+        &__col {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            a {
+                font-weight: 600;
+            }
+
+        }
+
+        }
+
+        &__link {
+            white-space: nowrap;
+            margin: 0 25px 0 0;
+
+            @include break-desk-big {
+                display: none;
+            }
+
+        }
+    }
+}
+
+.user-actions {
+
+    @include break-desk-big {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__mobile {
+        display: none;
+
+        @include break-desk-big {
+            display: flex;
+        }
+
+    }
+}
+
+.burger-button {
+    @include fixed-width-height(32px, 24px);
+    position: relative;
+    cursor: pointer;
+
+    span {
+        height: 3px;
+        border-radius: 16px;
+        position: absolute;
+
+        background-color: rgba(228, 5, 113, 1);
+
+        &:nth-child(1), 
+        &:nth-child(3) {
+            width: 100%;
+        }
+
+        &:nth-child(1) {
+            top: 0;
+            left: 0;
+        }
+
+        &:nth-child(2) {
+            width: 80%;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        &:nth-child(3) {
+            bottom: 0;
+            left: 0;
+        }
+
+    }
+
+}
+
+.burger-close {
+    @include fixed-width-height(32px, 32px);
+    position: relative;
+    margin-left: auto;
+    span {
+        @include width-height(32px, 3px);
+        position: absolute;
+        background-color: #E40571;
+        border-radius: 12px;
+        top: 50%;
+        left: 50%;
+        &:first-child {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &:last-child {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+}
+
+.burger-mobile {
+    @include transition;
+    @include width-height(100%, 100vh);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -200vw;
+    z-index: 50;
+    background-color: #fff;
+    padding: 20px;
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+        left: 0;
+    }
+
+    .nav {
+        &__list {
+            margin-top: 20px;
+        }
+        &__link {
+            @include transition;
+            display: flex;
+            font-weight: 600;
+            font-size: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #000;
+            margin-bottom: 10px;
+            cursor: pointer;
+            @include hover {
+                color: #E40571;
+                border-color: #E40571;
+            }
+        }
+        &__arrow {
+            display: none;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__sub {
+            &-list {
+                li {
+                    @include transition;
+                    cursor: pointer;
+
+                    @include hover {
+                        color: #E40571;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
 }
