@@ -1,7 +1,9 @@
 .facts-history {
     padding: 0 0 90px;
 
-
+    @include break-desk-big {
+        padding: 0 0 40px 0;
+    }
 
     &__bg {
         width: 100%;

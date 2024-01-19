@@ -325,6 +325,12 @@ new Swiper('.concert-slider', {
   slidesPerView: 1,
   loop: true,
 
+  pagination: {
+    el: ".concert-dots",
+    type: "bullets",
+    clickable: true,
+  },
+
   navigation: {
     nextEl: '.concert__next',
     prevEl: '.concert__prev',
