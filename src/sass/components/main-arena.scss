@@ -75,11 +75,19 @@
     }
     
 
+    &__button {
+        margin-bottom: 40px;
 
+        @include break-desk {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+    }
 
     &__content {
-        @include fc_;
-
+        display: flex;
+        align-items: flex-end;
         @include break-desk-big {
             flex-direction: column;
             align-items: normal;
@@ -184,7 +192,9 @@
             display: flex;
             align-items: flex-start;
 
+            
             @include break-desk {
+                padding: 0 20px;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 25px;

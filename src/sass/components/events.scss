@@ -104,6 +104,13 @@
                 &__button {
                     padding: 16px 38px !important;
                     margin-top: auto;
+
+                    @include break-desk {
+                        padding: 0 !important;
+                        border: 0;
+                        text-decoration: underline;
+                    }
+
                 }
             }
 

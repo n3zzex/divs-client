@@ -13,6 +13,8 @@ const mainSliderConfig = {
       el: ".main-arena__slider .main-arena__pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   navigation: {
@@ -53,6 +55,8 @@ new Swiper(".events__slider .content", {
       el: ".events__pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   navigation: {
@@ -77,6 +81,8 @@ new Swiper(".gyms-dance__slider .content", {
       el: ".gyms-dance__pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   navigation: {
@@ -100,6 +106,8 @@ new Swiper(".gyms-workout__slider .content", {
       el: ".gyms-workout__pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   navigation: {
@@ -123,6 +131,8 @@ new Swiper(".rent-press__slider .content", {
       el: ".rent-press__pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   navigation: {
@@ -146,6 +156,8 @@ new Swiper(".rent-vip__slider .content", {
       el: ".rent-vip__pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   navigation: {
@@ -169,6 +181,8 @@ new Swiper(".rent-arena__slider .content", {
       el: ".rent-arena__pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   navigation: {
@@ -192,6 +206,7 @@ new Swiper(".rent-area__slider .content", {
       el: ".rent-area__pagination",
       type: "bullets",
       clickable: true,
+      
     },
 
   navigation: {
@@ -215,6 +230,8 @@ new Swiper(".rent-floor__slider .content", {
       el: ".rent-floor__pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   navigation: {
@@ -238,6 +255,8 @@ new Swiper(".gyms-physical__slider .content", {
       el: ".gyms-physical__pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   navigation: {
@@ -258,6 +277,8 @@ new Swiper(newsSlider, {
       el: ".news-pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   navigation: {
@@ -272,6 +293,8 @@ new Swiper(".hotel-slider__slider", {
       el: ".hotel-page-slider-pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   spaceBetween: 20,
@@ -288,6 +311,8 @@ new Swiper(lettersSlider, {
       el: ".letters-pagination",
       type: "bullets",
       clickable: true,
+      
+      
     },
 
   navigation: {
@@ -321,6 +346,8 @@ new Swiper('.hotel .hotel-slider-wrapper', {
     el: ".hotel-slider-pagination",
     type: "bullets",
     clickable: true,
+    
+    
   },
 
   navigation: {
@@ -354,6 +381,8 @@ new Swiper('.reviews__slider', {
     el: ".main-arena__pagination",
     type: "bullets",
     clickable: true,
+    
+    
   },
 
   breakpoints: {

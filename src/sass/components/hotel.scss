@@ -5,6 +5,16 @@
     background-size: cover;
     background-position: center;
 
+    @include break-desk {
+        padding: 40px 0 80px 0;
+    }
+
+    &__desk {
+        @include break-desk {
+            display: none;
+        }
+    }
+
     .hotel__swab {
         z-index: 4;
         position: absolute;
@@ -56,6 +66,17 @@
     }
 
     &__info {
+
+        &-mobile {
+            display: none;
+
+            @include break-desk {
+                display: block;
+                text-align: center;
+            }
+
+        }
+
         .hotel__head {
             font-size: 25px;
             font-weight: 800;
@@ -160,6 +181,10 @@
         @include fcc;
         border: 1px solid rgba(168, 135, 113, 1);
         border-radius: 50%;
+
+        &.swiper-button-lock {
+            display: none !important;
+        }
 
         @include break-desk-big {
             @include fixed-width-height(42px, 42px);
