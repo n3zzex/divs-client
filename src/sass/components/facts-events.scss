@@ -4,8 +4,12 @@
     &__bg {
         width: 100%;
 
-        @include break-desk {
-            display: none;
+        @include break-desk-big {
+            height: 80px;
+            object-fit: cover;
+            object-position: right;
+            position: relative;
+            right: -20px;
         }
     }
 
@@ -18,18 +22,15 @@
         color: #fff;
 
         @include break-desk-big {
-            left: 10px;
+            left: 40px;
             font-size: 24px;
         }
 
         @include break-desk {
-            top: -35px;
-            left: 0;
-            color: $color-black-darken;
-        }
-
-        @include break-mobile-small {
+            left: 40px;
             font-size: 20px;
+            width: 180px;
+            top: -64px;
         }
     }
 

@@ -32,14 +32,6 @@
 
 .page-divs {
 
-    // &--concert {
-    //     background-image: url("../img/concert-bg.jpg");
-    //     background-repeat: no-repeat;
-    //     background-position: center;
-    //     background-size: cover;
-    //     min-height: 727px;
-    // }
-
     &--facts {
         background-image: url("../img/facts-bg.jpg");
         background-repeat: no-repeat;
@@ -349,6 +341,21 @@
     }
 }
 
+._mobile {
+    display: none;
+
+    @include break-desk-big {
+        display: flex;
+    }
+
+}
+
+._desktop {
+    @include break-desk-big {
+        display: none;
+    }
+}
+
 ._main-page__date {
     font-weight: 500;
     font-size: $fz-medium;
@@ -442,6 +449,7 @@
 .rent-arena,
 .rent-floor,
 .rent-area,
+.facts-letters,
 .events {
     
     &__prev,
@@ -676,11 +684,30 @@
     top: 40px;
     @include fc_;
 
+    @include break-desk-big {
+        position: static;
+        flex-direction: column;
+        width: 100%;
+        overflow: visible;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
     .category-list__item {
         color: #fff;
 
+        @include break-desk-big {
+
+            color: #000 !important;
+        }
+
         &:not(:last-child) {
             margin: 0 40px 0 0;
+
+            @include break-desk-big {
+                margin: 0 0 17px 0;
+            }
+
         }
     }
 
@@ -689,15 +716,13 @@
         font-size: 20px;
         color: #fff;
 
+        @include break-desk-big {
+            color: #000;
+        }
+
         @include break-mobile {
             font-size: 16px;
         }
-    }
-
-    @include break-desk-big {
-        width: 100%;
-        left: 120px;
-        overflow: auto;
     }
 }
 
