@@ -92,6 +92,10 @@
         color: #fff;
 
         @include break-mobile {
+            position: static;
+        }
+
+        @include break-mobile {
             top: -20px;
             left: 0;
             color: $color-black-darken;

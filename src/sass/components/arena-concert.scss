@@ -42,6 +42,11 @@
         @include break-desk-big {
             color: $color-black-darken;
         }
+
+        @include break-desk {
+            font-size: 30px !important;
+        }
+
     }
 
     &__head {
@@ -60,7 +65,12 @@
     }
 
     .arena-events__features {
-        margin: 0 40px 0 0
+        margin: 0 40px 0 0;
+
+        @include break-desk-big {
+            margin: 0 0 20px 0;
+        }
+
     }
 
     .info-box {

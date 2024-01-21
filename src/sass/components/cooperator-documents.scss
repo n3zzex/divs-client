@@ -3,6 +3,10 @@
     position: relative;
     overflow: hidden;
 
+    @include break-mobile {
+        padding: 180px 0 80px 0;
+    }
+
     &__bg {
         position: absolute;
         top: 0;
@@ -24,8 +28,17 @@
         font-size: 17px;
         color: #fff;
 
+        @include break-desk-big {
+            color: #000;
+        }
+
         &:not(:last-child) {
             margin: 0 20px 0 0;
+
+            @include break-desk-big {
+                margin: 0 0 10px 0;
+            }
+
         }
     }
 
@@ -53,11 +66,20 @@
             font-weight: 600;
             white-space: nowrap;
 
+            a {
+                @include fc_;
+            }
+
             img {
                 width: 27px;
                 height: 27px;
                 object-fit: cover;
-                margin: 0 32px 0 0;
+                margin-right: 30px;
+
+                @include break-mobile {
+                    margin-right: 10px;
+                }
+
             }
 
         }

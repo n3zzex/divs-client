@@ -50,6 +50,10 @@
             font-weight: 600;
             color: $color-black-darken;
 
+            a {
+                @include fc_;
+            }
+
             &:not(:last-child) {
                 margin: 0 0 20px 0;
             }
@@ -58,7 +62,13 @@
                 width: 27px;
                 height: 27px;
                 object-fit: cover;
-                margin: 0 30px 0 0;
+
+                margin-right: 30px;
+
+                @include break-mobile {
+                    margin-right: 10px;
+                }
+
             }
         }
     }

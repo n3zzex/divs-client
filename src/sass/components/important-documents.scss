@@ -1,6 +1,10 @@
 .important-documents {
     padding: 0 0 100px;
 
+    @include break-mobile {
+        padding: 0 0 30px 0;
+    }
+
     &__bg {
         width: 100%;
         overflow: hidden;
@@ -51,11 +55,20 @@
         font-weight: 600;
         white-space: nowrap;
 
+        a {
+            @include fc_;
+        }
+
         img {
             width: 27px;
             height: 27px;
             object-fit: cover;
-            margin: 0 32px 0 0;
+            margin-right: 30px;
+
+            @include break-mobile {
+                margin-right: 10px;
+            }
+
         }
     }
 }

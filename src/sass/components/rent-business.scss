@@ -3,6 +3,10 @@
     position: relative;
     overflow: hidden;
 
+    @include break-desk {
+        padding: 200px 0 80px;
+    }
+
     &__bg {
         position: absolute;
         top: 0;

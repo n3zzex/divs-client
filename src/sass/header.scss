@@ -2,6 +2,10 @@
 
 .header {
 
+    @include break-desk-big {
+        padding: 10px 0;
+    }
+
     &__logo {
         margin: 0 50px 0 0;
 
@@ -74,9 +78,8 @@
             }
 
             &__item {
-                position: relative;
                 @include fcc;
-                padding: 8px 16px;
+                position: relative;
                 margin: 0 32px 0 0;
                 cursor: pointer;
 
@@ -93,10 +96,13 @@
             }
 
             &__link {
+                @include fc_;
                 white-space: nowrap;
                 margin: 0 4px 0 0;
                 font-weight: 500;
                 font-size: 17px;
+                padding: 8px 16px;
+                gap: 10px;
             }
 
             .nav__sub-list {
@@ -118,6 +124,7 @@
                     font-weight: 500;
                     white-space: nowrap;
                     background-color: #fff;
+                    padding: 0;
 
                     a {
                         display: block;

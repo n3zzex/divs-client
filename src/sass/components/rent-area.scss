@@ -60,15 +60,21 @@
         @include fc_;
         margin: 0 0 25px;
 
+        @include break-desk {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: left;
+        }
+
         span {
             font-size: 32px;
             font-weight: 800;
             margin: 0 28px 0 0;
             color: $color-orange-main;
 
-            @include break-mobile-small {
+            @include break-desk-big {
                 font-size: 25px;
-                margin: 0 10px 0 0;
+                margin: 0 0 10px 0;
             }
         }
 

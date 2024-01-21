@@ -53,6 +53,11 @@
             display: flex;
             flex-direction: column;
             gap: 30px 35px;
+
+            @include break-desk {
+                gap: 0;
+            }
+
         }
 
         &__box {

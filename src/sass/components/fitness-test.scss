@@ -15,12 +15,15 @@
 
     &__inner {
         position: absolute;
-        top: 125px;
-        right: 300px;
+        top: 50%;
+        right: 50%;
         z-index: 100;
+
+        transform: translate(80%, -50%);
 
         @include break-desk-big {
             position: unset;
+            transform: translate(0);
         }
     }
 

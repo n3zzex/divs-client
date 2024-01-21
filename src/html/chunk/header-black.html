@@ -3,41 +3,56 @@
         <div class="header__inner">
             <div class="header__logo">
                 <a class="logo" href="/index.html">
-                    <img src="./img/logo-black.svg" alt="" />
+                    <img src="./img/logo.svg" alt="" />
                 </a>
             </div>
             <div class="header__contacts">
                 <div class="menu">
                     <ul class="menu__list">
-                        <li class="menu__item">
-                            <img class="menu__icon" src="./img/map-black-icon.svg" alt="">
+                        <li class="menu__item menu__item-address">
+                            <img class="menu__icon" src="./img/map-icon.svg" alt="map-icon" >
                             <a href="#" class="menu__link">г. Екатеринбург, Олимпийская набережная, д. 3</a>
                         </li>
                         <li class="menu__item">
-                            <img class="menu__icon" src="./img/phone-black-icon.svg" alt="" >
-                            <a href="#" class="menu__link">+7 (343) 359-37-77</a>
+                            <img class="menu__icon" src="./img/phone-icon.svg" alt="phone-icon" >
+                            <a href="tel:+7 (343) 359-37-77" class="menu__link">+7 (343) 359-37-77</a>
                         </li>
                         <li class="menu__item">
                             <a href="#" class="menu__link">Войти</a>
-                            <img class="menu__icon" src="./img/sign-in-black-icon.svg" alt="" >
+                            <img class="menu__icon" src="./img/sign-in-icon.svg" alt="sign-in-icon" />
                         </li>
                     </ul>
                     <div class="contact">
+                        <div class="header__logo header__logo-mobile">
+                            <a class="logo" href="/index.html">
+                                <img src="./img/logo.svg" alt="" />
+                            </a>
+                        </div>
                         <div class="contact__link">
-                            <button class="contact-black__button _button">Связаться с нами</button>
+                            <button class="contact__button _button">Связаться с нами</button>
                         </div>
                         <div>
                             <a class="contact__icon" href="#">
-                                <img src="./img/eyes-black-icon.svg" alt="">
+                                <img src="./img/eyes-icon.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="contact__col">
+                            <li class="menu__item">
+                                <img class="menu__icon" src="./img/phone-icon.svg" alt="phone-icon" >
+                                <a href="tel:+7 (343) 359-37-77" class="menu__link">+7 (343) 359-37-77</a>
+                            </li>
+                            <a href="#" style="color: rgba(228, 5, 113, 1); font-size: 13px; text-decoration: underline;">
+                                Связаться с нами
                             </a>
                         </div>
                     </div>
                 </div>
                 <nav class="nav">
-                    <ul class="nav__list">
+                    <ul class="nav__list"> 
                         <li class="nav__item">
-                            <a class="nav__link">Арена</a>
-                            <img class="nav__arrow"  src="./img/triangle-down-black-icon.svg" alt="">
+                            <a class="nav__link">Арена
+                                <img class="nav__arrow"  src="./img/triangle-down-icon.svg" alt="">
+                            </a>
                             <ul class="nav__sub-list">
                                 <li>
                                     <a class="nav__sub-link" href="/facts.html">О нас</a>
@@ -57,8 +72,9 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Наша афиша</a>
-                            <img class="nav__arrow" src="./img/triangle-down-black-icon.svg" alt="">
+                            <a class="nav__link" href="#">Наша афиша
+                                <img class="nav__arrow" src="./img/triangle-down-icon.svg" alt="">
+                            </a>
                             <ul class="nav__sub-list">
                                 <li>
                                     <a class="nav__sub-link" href="/news.html">Новости</a>
@@ -69,8 +85,9 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Посетителям</a>
-                            <img class="nav__arrow" src="./img/triangle-down-black-icon.svg" alt="">
+                            <a class="nav__link" href="#">Посетителям
+                                <img class="nav__arrow" src="./img/triangle-down-icon.svg" alt="">
+                            </a>
                             <ul class="nav__sub-list">
                                 <li>
                                     <a class="nav__sub-link" href="/arena.html">Главная арена</a>
@@ -92,8 +109,9 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Организаторам</a>
-                            <img class="nav__arrow" src="./img/triangle-down-black-icon.svg" alt="">
+                            <a class="nav__link" href="#">Организаторам
+                                <img class="nav__arrow" src="./img/triangle-down-icon.svg" alt="">
+                            </a>
                             <ul class="nav__sub-list">
                                 <li>
                                     <a class="nav__sub-link" href="/rent.html">Аренда</a>
@@ -110,16 +128,103 @@
                     <div class="user-actions">
                         <div class="user-actions__search">
                             <button class="user-actions__button">
-                                <img src="./img/search-black-icon.svg" alt="">
+                                <img src="./img/search-icon.svg" alt="search-icon">
                             </button>
                         </div>
                         <div class="user-actions__language">
                             <button class="user-actions__button">EN</button>
-                            <img src="./img/triangle-down-black-icon.svg" alt="">
+                            <img src="./img/triangle-down-icon.svg" alt="triangle-down-icon">
                         </div>
+                        <li class="menu__item user-actions__mobile">
+                            <a href="#" class="menu__link">Войти</a>
+                            <img class="menu__icon" src="./img/sign-in-icon.svg" alt="sign-in-icon" style="margin-left: 10px;">
+                        </li>
+                        <button class="burger-button user-actions__mobile" data-burger-toggle="">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </div>
                 </nav>
             </div>
         </div>
     </div>
 </header>
+<div class="burger-mobile">
+    <button class="burger-close" data-burger-toggle="">
+        <span></span><span></span>
+    </button>
+    <ul class="nav__list"> 
+        <li class="nav__item">
+            <a class="nav__link">Арена</a>
+            <img class="nav__arrow"  src="./img/triangle-down-icon.svg" alt="">
+            <ul class="nav__sub-list">
+                <li>
+                    <a class="nav__sub-link" href="/facts.html">О нас</a>
+                </li>
+                <li>
+                    <a class="nav__sub-link" href="/documents.html">Документы</a>
+                </li>
+                <li>
+                    <a class="nav__sub-link" href="/career.html">Вакансии</a>
+                </li>
+                <li>
+                    <a class="nav__sub-link" href="/cooperator.html">Для сотрудников</a>
+                </li>
+                <li>
+                    <a class="nav__sub-link" href="/council.html">Для ЧНС</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">Наша афиша</a>
+            <img class="nav__arrow" src="./img/triangle-down-icon.svg" alt="">
+            <ul class="nav__sub-list">
+                <li>
+                    <a class="nav__sub-link" href="/news.html">Новости</a>
+                </li>
+                <li>
+                    <a class="nav__sub-link" href="/poster.html">Афиша</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">Посетителям</a>
+            <img class="nav__arrow" src="./img/triangle-down-icon.svg" alt="">
+            <ul class="nav__sub-list">
+                <li>
+                    <a class="nav__sub-link" href="/arena.html">Главная арена</a>
+                </li>
+                <li>
+                    <a class="nav__sub-link" href="/gyms.html">Тренировочные залы</a>
+                </li>
+                <li>
+                    <a class="nav__sub-link" href="/fitness-arena.html">Фитнес-арена</a>
+
+                </li>
+                <li>
+                    <a class="nav__sub-link" href="/hotel.html">Гостиница</a>
+
+                </li>
+                <li>
+                    <a class="nav__sub-link" href="#">Кафе</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">Организаторам</a>
+            <img class="nav__arrow" src="./img/triangle-down-icon.svg" alt="">
+            <ul class="nav__sub-list">
+                <li>
+                    <a class="nav__sub-link" href="/rent.html">Аренда</a>
+                </li>
+                <li>
+                    <a class="nav__sub-link" href="/advertisers.html">Рекламодателям</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="/contacts.html">Контакты</a>
+        </li>
+    </ul>
+</div>

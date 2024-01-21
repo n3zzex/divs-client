@@ -30,24 +30,45 @@
     &__inner {
         padding: 0 80px 54px;
         color: $color-white-main;
+
+        @include break-mobile {
+            padding: 0;
+        }
+
     }
 
     &__title {
         font-weight: 700;
         font-size: $fz-big;
         margin: 0 0 10px;
+
+        @include break-mobile {
+            font-size: 28px;
+        }
+
     }
 
     &__description {
         font-weight: 500;
         font-size: $fz-medium;
         max-width: 636px;
-        margin: 0 0 35px;
+        margin-bottom: 35px;
+
+        @include break-mobile {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
     }
 
     &__button {
         display: flex;
         padding: 22px 38px !important;
         font-size: $fz-main !important;
+
+        @include break-mobile {
+            padding: 16px 20px !important;
+        }
+
     }
 }

@@ -573,23 +573,29 @@
         font-weight: 500;
         font-size: 18px;
     }
-}
 
-.breadcrumbs__item:not(:last-child) {
-    color: $color-purple-button;
-    white-space: nowrap;
-}
+    &__item {
+        @include fcc;
+        &:not(:last-child) {
+            color: $color-purple-button;
+            white-space: nowrap;
 
-.breadcrumbs__item:not(:last-child)::after {
-    content: ">";
-    color: $color-purple-button;
-    margin: 0 10px;
-}
+            &::after {
+                content: ">";
+                color: $color-purple-button;
+                margin: 0 10px;
+            }
 
+        } 
+    }
 
-.breadcrumbs__link:not([href]) {
-    font-weight: 400;
-    color: #fff;
+    &__link {
+        &:not([href]) {
+            font-weight: 400;
+            color: #fff;
+        }
+    }
+
 }
 
 .gyms-list {

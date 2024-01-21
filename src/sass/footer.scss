@@ -75,7 +75,7 @@
         padding: 230px 0 80px;
 
         @include break-desk-big {
-            padding: 217px 0 80px;
+            padding: 80px 0;
         }
 
 
@@ -149,7 +149,6 @@
         &__name {
             font-size: 18px;
             font-weight: 700;
-            margin: 0 0 10px;
         }
 
         &__item {
