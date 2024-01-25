@@ -49,7 +49,7 @@
         }
 
         .map-list {
-            @include fcc;
+            display: flex;
             gap: 80px;
 
             @include break-desk-big {
@@ -73,8 +73,16 @@
             }
 
             &__info {
-                @include fc_;
+                display: flex;
+                align-items: flex-start;
                 gap: 10px;
+
+                margin-top: 5px;
+
+                img {
+                    position: relative;
+                    top: 8px;
+                }
 
                 @include break-desk-big {
                     align-items: normal;

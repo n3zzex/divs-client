@@ -699,6 +699,19 @@
         justify-content: center;
     }
 
+    .category-list__link {
+        border-color: #fff;
+
+        @include break-desk-big {
+            border-color: $color-purple-button;
+        }
+
+        @include hover {
+            border-color: $color-purple-button;
+        }
+
+    }
+
     .category-list__item {
         color: #fff;
 

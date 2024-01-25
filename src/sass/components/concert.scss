@@ -48,18 +48,11 @@
         overflow: hidden;
     }
 
-    &__next {
-        position: absolute;
-        right: 15%;
-        top: 34%;
-        z-index: 10;
-    }
-
     &__prev,
     &__next {
         position: absolute;
         z-index: 10;
-        top: 50%;
+        top: 34%;
 
         @include break-desk-big {
             bottom: 25px;
@@ -193,6 +186,12 @@
 
         .concert-category__item {
             &:hover {
+                transform: scale(1.05);
+
+                @include break-desk-big {
+                    transform: scale(1);
+                }
+
                 .category-inner {
                     opacity: 1;
                 }
