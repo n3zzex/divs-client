@@ -7,7 +7,6 @@
         position: absolute;
         top: -420px;
         left: 0;
-        object-fit: scale-down;
 
         @include break-desk-big {
             display: none;
@@ -30,8 +29,22 @@
 
     &__inner {
         position: relative;
-        top: -180px;
+        top: -200px;
         z-index: 5;
+
+        @media (max-width: 1650px) {
+            top: -250px;
+        }
+
+        @media (max-width: 1500px) {
+            top: -300px;
+        }
+
+        @include break-desk {
+            top: 0;
+            padding-top: 30px;
+        }
+
     }
 
     &__title {

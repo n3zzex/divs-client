@@ -7,6 +7,10 @@
         position: absolute;
         top: -270px;
 
+        @media (max-width: 1500px) {
+            top: -220px;
+        }
+
         @include break-desk-big {
             display: none;
         }
@@ -20,8 +24,8 @@
             top: -80px;
         }
 
-        @include break-mobile {
-            top: -60px;
+        @include break-desk {
+            top: 0;
         }
     }
 

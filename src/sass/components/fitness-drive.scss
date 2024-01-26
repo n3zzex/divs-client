@@ -1,6 +1,10 @@
 .fitnes-drive {
     padding: 0 0 100px;
 
+    @include break-desk {
+        padding: 0 0 40px;
+    }
+
 
     .fitness-drive__number {
         font-weight: 800;

@@ -24,6 +24,11 @@
     .reviews {
         position: relative;
         overflow: hidden;
+
+        @include break-mobile {
+            overflow: visible;
+        }
+
     }
 
     .reviews-item {
@@ -31,6 +36,10 @@
         
         border-radius: 60px 10px 10px 10px;
         background-color: #f1f1f1;
+
+        @include break-mobile {
+            padding: 40px 45px;
+        }
 
         &__content {
 
@@ -48,6 +57,11 @@
             .review-quote {
                 @include width-height(68px, 58px);
                 object-fit: cover;
+
+                @include break-mobile {
+                    display: none;
+                }
+
             }
         }
 
@@ -59,6 +73,12 @@
                 @include width-height(89px, 89px);
                 margin: 0 24px 0 0;
                 object-fit: cover;
+
+                @include break-mobile {
+                    @include width-height(40px, 40px);
+                    margin: 0 10px 0 0;
+                }
+
             }
         }
 
@@ -72,7 +92,12 @@
             img {
                 @include width-height(17px, 16px);
                 &:not(:last-child) {
-                    margin: 0 15px 0 0
+                    margin: 0 15px 0 0;
+
+                    @include break-mobile {
+                        margin: 0 5px 0 0;
+                    }
+
                 }
             }
         }

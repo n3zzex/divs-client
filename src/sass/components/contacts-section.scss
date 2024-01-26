@@ -1,6 +1,7 @@
 .contacts-section {
     position: relative;
 
+    overflow: hidden;
 
     &__bg {
         position: absolute;
@@ -8,6 +9,14 @@
         right: 0;
         object-fit: scale-down;
         z-index: 1;
+        
+        @media (max-width: 1650px) {
+            right: -100px;
+        }
+
+        @media (max-width: 1550px) {
+            right: -200px;
+        }
 
         @include break-desk-big {
             display: none;
