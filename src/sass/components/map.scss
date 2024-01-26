@@ -82,11 +82,9 @@
                 img {
                     position: relative;
                     top: 8px;
+                    min-width: 11px;
                 }
 
-                @include break-desk-big {
-                    align-items: normal;
-                }
             }
         }
     }

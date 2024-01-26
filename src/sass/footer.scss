@@ -48,7 +48,8 @@
     }
 
     &__main {
-        @include fc_;
+        display: flex;
+        align-items: flex-start;
         gap: 100px;
 
         margin-bottom: 35px;
@@ -59,6 +60,7 @@
         @include break-desk-big {
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             gap:  24px;
         }
 
@@ -71,7 +73,7 @@
 
     &__inner {
 
-        padding: 80px 0;
+        padding: 100px 0 80px 0;
 
         .footer-info {
             font-size: 12px;
@@ -136,7 +138,8 @@
     }
 
     .footer-list {
-        @include fcc;
+        display: flex;
+        align-items: flex-start;
         flex-direction: column;
         color: #fff;
 
